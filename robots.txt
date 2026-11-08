@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://islam-osama2024.github.io/Hero-Chicken2016/sitemap.xml
