@@ -7,7 +7,7 @@ const CONFIG = {
   defaultLang: "ar",
 
   // مواعيد العمل (24:00 = 12 بالليل). المنطقة الزمنية مصر.
-  hours: { open: "09:00", close: "22:00", tz: "Africa/Cairo" }
+  hours: { open: "09:00", close: "22:00", tz: "Africa/Cairo" },
 
   // التوصيل: لكل منطقة fee (رسوم التوصيل، null = بتتحدد عند التأكيد) و min (الحد الأدنى للطلب)
   delivery: {
