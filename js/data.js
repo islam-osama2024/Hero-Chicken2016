@@ -53,7 +53,7 @@ const CONFIG = {
    اللي رابطه فاضي مش بيظهر في الفوتر. الواتساب بيظهر لوحده دايماً. */
 const SOCIAL = [
   { key: "facebook",  label: "Facebook",  url: "https://www.facebook.com/profile.php?id=61594980556785" },
-  { key: "instagram", label: "Instagram", url: "" },
+  { key: "instagram", label: "Instagram", url: "https://www.instagram.com/hero_chicken_banha/" },
   { key: "tiktok",    label: "TikTok",    url: "" },
   { key: "youtube",   label: "YouTube",   url: "" }
 ];
