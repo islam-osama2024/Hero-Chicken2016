@@ -1,3 +1,8 @@
+/* =========================================================
+   Hero Chicken - data.js
+   كل اللي بتغيره بإيدك (رقم الواتساب، الأسعار، الأصناف، النصوص)
+   موجود هنا. ملف main.js مش محتاج تلمسه.
+   ========================================================= */
 
 /* ---------- 1) الإعدادات ---------- */
 const CONFIG = {
@@ -119,7 +124,7 @@ const CATEGORIES = [
       { ar: "شيش سادة", en: "Plain shish", price: 195, unit: "kg", img: "images/plain-shish.jpg" },
       { ar: "كوردن بلو", en: "Cordon bleu", price: 340, unit: "kg", img: "images/cordon-bleu.jpg" },
       { ar: "كبد", en: "Liver", price: 120, unit: "kg", img: "images/liver.jpg" },
-      { ar: "قوانص", en: "Gizzards", price: 110, unit: "kg", img: "images/gizzards.jpg" },
+      { ar: "كبد وقوانص", en: "Liver & gizzards", price: 110, unit: "kg", img: "images/liver-gizzards.jpg" },
       { ar: "رقبة", en: "Necks", price: 35, unit: "kg", img: "images/necks.jpg" },
       { ar: "هياكل", en: "Carcasses", price: 35, unit: "kg", img: "images/carcasses.jpg" }
     ]
@@ -131,7 +136,8 @@ const CATEGORIES = [
       { ar: "لانشون فراخ طبيعي", en: "Natural chicken luncheon", price: 295, unit: "kg", img: "images/natural-chicken-luncheon.jpg" },
       { ar: "سوسيس فراخ طبيعي", en: "Natural chicken sausage", price: 295, unit: "kg", img: "images/natural-chicken-sausage.jpg" },
       { ar: "كفتة فراخ طبيعي", en: "Natural chicken kofta", price: 299, unit: "kg", img: "images/natural-chicken-kofta.jpg" },
-      { ar: "مسحب فراخ طبيعي", en: "Natural pulled chicken", price: 299, unit: "kg", img: "images/natural-pulled-chicken.jpg" }
+      { ar: "مسحب فراخ طبيعي", en: "Natural pulled chicken", price: 299, unit: "kg", img: "images/natural-pulled-chicken.jpg" },
+      { ar: "برجر فراخ بحشو الجبنة", en: "Cheese-stuffed chicken burger", price: 330, unit: "kg", img: "images/cheese-stuffed-chicken-burger.jpg" }
     ]
   },
   {
@@ -141,7 +147,10 @@ const CATEGORIES = [
       { ar: "صدور بالعظم بروست", en: "Broasted bone-in breasts", price: 240, unit: "kg", img: "images/broasted-bone-in-breasts.jpg" },
       { ar: "بانية بروست", en: "Broasted cutlets", price: 299, unit: "kg", img: "images/broasted-cutlets.jpg" },
       { ar: "أجنحة بروست", en: "Broasted wings", price: 150, unit: "kg", img: "images/broasted-wings.jpg" },
-      { ar: "فخذ بروست", en: "Broasted thigh", price: 150, unit: "kg", img: "images/broasted-thigh.jpg" }
+      { ar: "فخذ بروست", en: "Broasted thigh", price: 150, unit: "kg", img: "images/broasted-thigh.jpg" },
+      { ar: "تشيكن رول عادي", en: "Chicken roll", price: 340, unit: "kg", img: "images/chicken-roll.jpg" },
+      { ar: "تشيكن رول بقسماط", en: "Breaded chicken roll", price: 340, unit: "kg", img: "images/breaded-chicken-roll.jpg" },
+      { ar: "صوابع جبنة موزاريلا", en: "Mozzarella cheese sticks", price: 270, unit: "kg", img: "images/mozzarella-sticks.jpg" }
     ]
   },
   {
@@ -152,7 +161,10 @@ const CATEGORIES = [
       { ar: "أوراك بالعظم متبلة تركي", en: "Turkish marinated bone-in thighs", price: 195, unit: "kg", img: "images/turkish-marinated-bone-in-thighs.jpg" },
       { ar: "شيش متبلة تركي", en: "Turkish marinated shish", price: 295, unit: "kg", img: "images/turkish-marinated-shish.jpg" },
       { ar: "سيخ شاورما تركي", en: "Turkish shawarma skewer", price: 330, unit: "kg", img: "images/turkish-shawarma-skewer.jpg" },
-      { ar: "شاورما شرائح تركي", en: "Turkish shawarma slices", price: 299, unit: "kg", img: "images/turkish-shawarma-slices.jpg" }
+      { ar: "شاورما شرائح تركي", en: "Turkish shawarma slices", price: 299, unit: "kg", img: "images/turkish-shawarma-slices.jpg" },
+      { ar: "دبابيس متبلة تركي", en: "Turkish marinated drumsticks", price: 230, unit: "kg", img: "images/turkish-marinated-drumsticks.jpg" },
+      { ar: "شيش باربكيو", en: "BBQ shish", price: 300, unit: "kg", img: "images/bbq-shish.jpg" },
+      { ar: "شيش مسطردة", en: "Mustard shish", price: 330, unit: "kg", img: "images/mustard-shish.jpg" }
     ]
   },
   {
@@ -243,7 +255,7 @@ const CATEGORIES = [
       { ar: "بطاطس مجمدة", en: "Frozen potatoes", price: 120, unit: "kg", img: "images/frozen-potatoes.jpg" },
       { ar: "ماشروم طازج", en: "Fresh mushrooms", price: 60, unit: "tray", img: "images/fresh-mushrooms.jpg" },  // ⚠ سعر تقديري
       { ar: "ماشروم علب", en: "Canned mushrooms", price: 55, unit: "pack", img: "images/canned-mushrooms.jpg" },  // ⚠ سعر تقديري
-      { ar: "كريمة لباني", en: "Labani cream", price: 75, unit: "pack", img: "images/labani-cream.jpg" },  // ⚠ سعر تقديري
+      { ar: "كريمة لباني", en: "Labani cream", price: 75, unit: "pack", img: "images/labani-cream.jpg" },
       { ar: "مخلل", en: "Pickles", price: 35, unit: "pack", img: "images/pickles.jpg" },  // ⚠ سعر تقديري
       { ar: "طبق خضار سلطة", en: "Salad vegetables tray", price: 40, unit: "tray", img: "images/salad-vegetables-tray.jpg" },  // ⚠ سعر تقديري
       { ar: "طبق خضار شوربة", en: "Soup vegetables tray", price: 40, unit: "tray", img: "images/soup-vegetables-tray.jpg" }  // ⚠ سعر تقديري
