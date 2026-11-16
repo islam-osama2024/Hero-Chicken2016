@@ -53,6 +53,7 @@ let total = 0, noPrice = 0;
   const cn = "القسم " + (ci + 1) + " (" + (c.ar || "؟") + ")";
   if (!isStr(c.ar) || !isStr(c.en)) err(cn + ": ناقصه الاسم ar أو en");
   if (!isStr(c.icon)) warn(cn + ": مفيش icon");
+  if (c.note !== undefined && (!c.note || !isStr(c.note.ar) || !isStr(c.note.en))) err(cn + ": note لازم يكون بالشكل { ar: \"...\", en: \"...\" }");
   if (!Array.isArray(c.items) || !c.items.length) { err(cn + ": مفيهوش أصناف"); return; }
   const seen = new Set();
   c.items.forEach((it, ii) => {
