@@ -122,21 +122,22 @@ const CATEGORIES = [
       { ar: "أوراك مخلية سادة", en: "Boneless thighs", price: 195, unit: "kg", img: "images/boneless-thighs.jpg" },
       { ar: "دبابيس سادة", en: "Plain drumsticks", price: 130, unit: "kg", img: "images/plain-drumsticks.jpg" },
       { ar: "شيش سادة", en: "Plain shish", price: 195, unit: "kg", img: "images/plain-shish.jpg" },
-      { ar: "كوردن بلو", en: "Cordon bleu", price: 340, unit: "kg", img: "images/cordon-bleu.jpg" },
       { ar: "كبد", en: "Liver", price: 120, unit: "kg", img: "images/liver.jpg" },
       { ar: "كبد وقوانص", en: "Liver & gizzards", price: 110, unit: "kg", img: "images/liver-gizzards.jpg" },
       { ar: "رقبة", en: "Necks", price: 35, unit: "kg", img: "images/necks.jpg" },
-      { ar: "هياكل", en: "Carcasses", price: 35, unit: "kg", img: "images/carcasses.jpg" }
+      { ar: "هياكل", en: "Carcasses", price: 35, unit: "kg", img: "images/carcasses.jpg" },
+      { ar: "أرجل دجاج", en: "Chicken feet", price: 25, unit: "kg" }
     ]
   },
   {
     ar: "مفروم", en: "Minced & processed", icon: "🌭",
+    note: { ar: "لحم دجاج صافي بدون جلد", en: "Pure skinless chicken meat" },
     items: [
-      { ar: "برجر فراخ طبيعي", en: "Natural chicken burger", price: 299, unit: "kg", img: "images/natural-chicken-burger.jpg" },
-      { ar: "لانشون فراخ طبيعي", en: "Natural chicken luncheon", price: 295, unit: "kg", img: "images/natural-chicken-luncheon.jpg" },
-      { ar: "سوسيس فراخ طبيعي", en: "Natural chicken sausage", price: 295, unit: "kg", img: "images/natural-chicken-sausage.jpg" },
-      { ar: "كفتة فراخ طبيعي", en: "Natural chicken kofta", price: 299, unit: "kg", img: "images/natural-chicken-kofta.jpg" },
-      { ar: "مسحب فراخ طبيعي", en: "Natural pulled chicken", price: 299, unit: "kg", img: "images/natural-pulled-chicken.jpg" },
+      { ar: "برجر فراخ سادة", en: "Plain chicken burger", price: 299, unit: "kg", img: "images/natural-chicken-burger.jpg" },
+      { ar: "لانشون فراخ مدخن", en: "Smoked chicken luncheon", price: 300, unit: "kg", img: "images/natural-chicken-luncheon.jpg" },
+      { ar: "سوسيس فراخ سادة", en: "Plain chicken sausage", price: 295, unit: "kg", img: "images/natural-chicken-sausage.jpg" },
+      { ar: "كفتة فراخ سادة", en: "Plain chicken kofta", price: 299, unit: "kg", img: "images/natural-chicken-kofta.jpg" },
+      { ar: "مسحب فراخ سادة", en: "Plain pulled chicken", price: 299, unit: "kg", img: "images/natural-pulled-chicken.jpg" },
       { ar: "برجر فراخ بحشو الجبنة", en: "Cheese-stuffed chicken burger", price: 330, unit: "kg", img: "images/cheese-stuffed-chicken-burger.jpg" }
     ]
   },
@@ -147,24 +148,21 @@ const CATEGORIES = [
       { ar: "صدور بالعظم بروست", en: "Broasted bone-in breasts", price: 240, unit: "kg", img: "images/broasted-bone-in-breasts.jpg" },
       { ar: "بانية بروست", en: "Broasted cutlets", price: 299, unit: "kg", img: "images/broasted-cutlets.jpg" },
       { ar: "أجنحة بروست", en: "Broasted wings", price: 150, unit: "kg", img: "images/broasted-wings.jpg" },
-      { ar: "فخذ بروست", en: "Broasted thigh", price: 150, unit: "kg", img: "images/broasted-thigh.jpg" },
-      { ar: "تشيكن رول عادي", en: "Chicken roll", price: 340, unit: "kg", img: "images/chicken-roll.jpg" },
-      { ar: "تشيكن رول بقسماط", en: "Breaded chicken roll", price: 340, unit: "kg", img: "images/breaded-chicken-roll.jpg" },
-      { ar: "صوابع جبنة موزاريلا", en: "Mozzarella cheese sticks", price: 270, unit: "kg", img: "images/mozzarella-sticks.jpg" }
+      { ar: "صوابع جبنة موزاريلا", en: "Mozzarella cheese sticks", price: 270, unit: "kg", img: "images/mozzarella-sticks.jpg" },
+      { ar: "كوردن بلو فرنسي شوي", en: "French cordon bleu (grilled)", price: 350, unit: "kg", img: "images/cordon-bleu.jpg" },
+      { ar: "كوردن بلو فرنسي قلي", en: "French cordon bleu (fried)", price: 370, unit: "kg", img: "images/cordon-bleu.jpg" }
     ]
   },
   {
     ar: "تتبيلة حاتي تركي", en: "Turkish marinade", icon: "🥙",
     items: [
       { ar: "فرخة كاملة متبلة تركي", en: "Turkish marinated whole chicken", price: 195, unit: "kg", img: "images/turkish-marinated-whole-chicken.jpg", opts: ["cut"] },
-      { ar: "صدور بالعظم متبلة تركي", en: "Turkish marinated bone-in breasts", price: 270, unit: "kg", img: "images/turkish-marinated-bone-in-breasts.jpg" },
       { ar: "أوراك بالعظم متبلة تركي", en: "Turkish marinated bone-in thighs", price: 195, unit: "kg", img: "images/turkish-marinated-bone-in-thighs.jpg" },
-      { ar: "شيش متبلة تركي", en: "Turkish marinated shish", price: 295, unit: "kg", img: "images/turkish-marinated-shish.jpg" },
+      { ar: "شيش طاوق تركي", en: "Turkish tawook shish", price: 295, unit: "kg", img: "images/turkish-marinated-shish.jpg" },
       { ar: "سيخ شاورما تركي", en: "Turkish shawarma skewer", price: 330, unit: "kg", img: "images/turkish-shawarma-skewer.jpg" },
       { ar: "شاورما شرائح تركي", en: "Turkish shawarma slices", price: 299, unit: "kg", img: "images/turkish-shawarma-slices.jpg" },
-      { ar: "دبابيس متبلة تركي", en: "Turkish marinated drumsticks", price: 230, unit: "kg", img: "images/turkish-marinated-drumsticks.jpg" },
-      { ar: "شيش باربكيو", en: "BBQ shish", price: 300, unit: "kg", img: "images/bbq-shish.jpg" },
-      { ar: "شيش مسطردة", en: "Mustard shish", price: 330, unit: "kg", img: "images/mustard-shish.jpg" }
+      { ar: "شيش طاوق الباربكيو", en: "BBQ tawook shish", price: 330, unit: "kg", img: "images/bbq-shish.jpg" },
+      { ar: "شيش طاوق المسطردة", en: "Mustard tawook shish", price: 330, unit: "kg", img: "images/mustard-shish.jpg" }
     ]
   },
   {
@@ -172,9 +170,7 @@ const CATEGORIES = [
     items: [
       { ar: "أجنحة متبلة مكسيكي", en: "Mexican marinated wings", price: 170, unit: "kg", img: "images/mexican-marinated-wings.jpg" },
       { ar: "دبابيس متبلة مكسيكي", en: "Mexican marinated drumsticks", price: 240, unit: "kg", img: "images/mexican-marinated-drumsticks.jpg" },
-      { ar: "صدور متبلة مكسيكي", en: "Mexican marinated breasts", price: 299, unit: "kg", img: "images/mexican-marinated-breasts.jpg" },
-      { ar: "شيش متبلة مكسيكي", en: "Mexican marinated shish", price: 290, unit: "kg", img: "images/mexican-marinated-shish.jpg" },
-      { ar: "فاهيتا مكسيكي", en: "Mexican fajita", price: 299, unit: "kg", img: "images/mexican-fajita.jpg" }
+      { ar: "صدور متبلة مكسيكي", en: "Mexican marinated breasts", price: 299, unit: "kg", img: "images/mexican-marinated-breasts.jpg" }
     ]
   },
   {
@@ -221,7 +217,6 @@ const CATEGORIES = [
     items: [
       { ar: "عيش سوري", en: "Syrian bread", price: 20, unit: "bag", img: "images/syrian-bread.jpg" },  // ⚠ سعر تقديري
       { ar: "عيش كيذر", en: "Kaiser bread", price: 25, unit: "bag", img: "images/kaiser-bread.jpg" },  // ⚠ سعر تقديري
-      { ar: "عيش فينو", en: "Fino bread", price: 25, unit: "bag", img: "images/fino-bread.jpg" },  // ⚠ سعر تقديري
       { ar: "عيش فرنساوي", en: "French bread", price: 30, unit: "bag", img: "images/french-bread.jpg" }  // ⚠ سعر تقديري
     ]
   },
@@ -229,8 +224,7 @@ const CATEGORIES = [
     ar: "شواية بيتي", en: "Home grills", icon: "🔥",
     items: [
       { ar: "شواية بيتي صغيرة", en: "Home grill (small)", price: 300, unit: "unit", img: "images/home-grill-small.jpg" },
-      { ar: "شواية بيتي كبيرة", en: "Home grill (large)", price: 450, unit: "unit", img: "images/home-grill-large.jpg" },
-      { ar: "أعواد شوي", en: "Grill skewers", price: 25, unit: "bag", img: "images/grill-skewers.jpg" }
+      { ar: "شواية بيتي كبيرة", en: "Home grill (large)", price: 450, unit: "unit", img: "images/home-grill-large.jpg" }
     ]
   },
   {
@@ -238,15 +232,6 @@ const CATEGORIES = [
     items: [
       { ar: "أرز بسمتي", en: "Basmati rice", price: 95, unit: "kg", img: "images/basmati-rice.jpg" },
       { ar: "أرز مصري", en: "Egyptian rice", price: 28, unit: "kg", img: "images/egyptian-rice.jpg" }
-    ]
-  },
-  {
-    ar: "توابل", en: "Spices", icon: "🧂",
-    items: [
-      { ar: "ملح أبيض ناعم", en: "Fine white salt", price: 15, unit: "box", img: "images/fine-white-salt.jpg" },  // ⚠ سعر تقديري
-      { ar: "فلفل أسود ناعم", en: "Fine black pepper", price: 35, unit: "box", img: "images/fine-black-pepper.jpg" },  // ⚠ سعر تقديري
-      { ar: "فلفل أبيض ناعم", en: "Fine white pepper", price: 35, unit: "box", img: "images/fine-white-pepper.jpg" },  // ⚠ سعر تقديري
-      { ar: "كمون ناعم", en: "Fine cumin", price: 30, unit: "box", img: "images/fine-cumin.jpg" }  // ⚠ سعر تقديري
     ]
   },
   {
