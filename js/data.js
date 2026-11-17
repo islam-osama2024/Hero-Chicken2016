@@ -218,8 +218,8 @@ const CATEGORIES = [
   {
     ar: "خبز", en: "Bread", icon: "🥖",
     items: [
-      { ar: "عيش سوري", en: "Syrian bread", price: 20, unit: "bag", img: "images/syrian-bread.jpg" },  // ⚠ سعر تقديري
-      { ar: "عيش كيذر", en: "Kaiser bread", price: 25, unit: "bag", img: "images/kaiser-bread.jpg" },  // ⚠ سعر تقديري
+      { ar: "عيش سوري", en: "Syrian bread", price: 35, unit: "bag", img: "images/syrian-bread.jpg" },  // ⚠ سعر تقديري
+      { ar: "عيش كيذر", en: "Kaiser bread", price: 60, unit: "bag", img: "images/kaiser-bread.jpg" },  // ⚠ سعر تقديري
       { ar: "عيش فرنساوي", en: "French bread", price: 30, unit: "bag", img: "images/french-bread.jpg" }  // ⚠ سعر تقديري
     ]
   },
