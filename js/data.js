@@ -145,7 +145,7 @@ const CATEGORIES = [
   {
     ar: "بروست", en: "Broasted", icon: "🍟",
     items: [
-      { ar: "دبابيس بروست", en: "Broasted drumsticks", price: 230, unit: "kg", img: "images/broasted-drumsticks.jpg" },
+      { ar: "دبابيس بروست", en: "Broasted drumsticks", price: 250, unit: "kg", img: "images/broasted-drumsticks.jpg" },
       { ar: "صدور بالعظم بروست", en: "Broasted bone-in breasts", price: 240, unit: "kg", img: "images/broasted-bone-in-breasts.jpg" },
       { ar: "بانية بروست", en: "Broasted cutlets", price: 299, unit: "kg", img: "images/broasted-cutlets.jpg" },
       { ar: "أجنحة بروست", en: "Broasted wings", price: 150, unit: "kg", img: "images/broasted-wings.jpg" },
