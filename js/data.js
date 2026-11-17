@@ -124,8 +124,8 @@ const CATEGORIES = [
       { ar: "شيش سادة", en: "Plain shish", price: 195, unit: "kg", img: "images/plain-shish.jpg" },
       { ar: "كبد", en: "Liver", price: 120, unit: "kg", img: "images/liver.jpg" },
       { ar: "كبد وقوانص", en: "Liver & gizzards", price: 110, unit: "kg", img: "images/liver-gizzards.jpg" },
-      { ar: "رقبة", en: "Necks", price: 35, unit: "kg", img: "images/necks.jpg" },
-      { ar: "هياكل", en: "Carcasses", price: 35, unit: "kg", img: "images/carcasses.jpg" },
+      { ar: "رقبة", en: "Necks", price: 25, unit: "kg", img: "images/necks.jpg" },
+      { ar: "هياكل", en: "Carcasses", price: 45, unit: "kg", img: "images/carcasses.jpg" },
       { ar: "أرجل دجاج", en: "Chicken feet", price: 25, unit: "kg", img: "images/chicken-feet.webp" }
     ]
   },
