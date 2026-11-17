@@ -103,7 +103,7 @@ function renderMenu() {
 
   $("menu").innerHTML = CATEGORIES.map((cat, c) =>
     `<section class="cat" id="cat-${c}" data-c="${c}">
-       <h2 class="cat-title">${cat[lang]}${cat.note ? ` <small style="font-size:.62em;font-weight:600;opacity:.8">(${cat.note[lang]})</small>` : ""}</h2>
+       <h2 class="cat-title">${cat[lang]}${cat.note ? ` <small style="font-size:.8em;font-weight:600;opacity:.85">(${cat.note[lang]})</small>` : ""}</h2>
        <div class="grid">${cat.items.map((item, i) => cardHTML(cat, item, c, i)).join("")}</div>
      </section>`).join("");
 

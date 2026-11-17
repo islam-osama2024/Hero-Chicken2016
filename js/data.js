@@ -126,7 +126,7 @@ const CATEGORIES = [
       { ar: "كبد وقوانص", en: "Liver & gizzards", price: 110, unit: "kg", img: "images/liver-gizzards.jpg" },
       { ar: "رقبة", en: "Necks", price: 35, unit: "kg", img: "images/necks.jpg" },
       { ar: "هياكل", en: "Carcasses", price: 35, unit: "kg", img: "images/carcasses.jpg" },
-      { ar: "أرجل دجاج", en: "Chicken feet", price: 25, unit: "kg" }
+      { ar: "أرجل دجاج", en: "Chicken feet", price: 25, unit: "kg", img: "images/chicken-feet.jpg" }
     ]
   },
   {
@@ -138,7 +138,8 @@ const CATEGORIES = [
       { ar: "سوسيس فراخ سادة", en: "Plain chicken sausage", price: 295, unit: "kg", img: "images/natural-chicken-sausage.jpg" },
       { ar: "كفتة فراخ سادة", en: "Plain chicken kofta", price: 299, unit: "kg", img: "images/natural-chicken-kofta.jpg" },
       { ar: "مسحب فراخ سادة", en: "Plain pulled chicken", price: 299, unit: "kg", img: "images/natural-pulled-chicken.jpg" },
-      { ar: "برجر فراخ بحشو الجبنة", en: "Cheese-stuffed chicken burger", price: 330, unit: "kg", img: "images/cheese-stuffed-chicken-burger.jpg" }
+      { ar: "برجر فراخ بحشو الجبنة", en: "Cheese-stuffed chicken burger", price: 330, unit: "kg", img: "images/cheese-stuffed-chicken-burger.jpg" },
+      { ar: "صدور مدخنة", en: "Smoked chicken breasts", price: null, unit: "kg", img: "images/smoked-chicken-breasts.jpg" }
     ]
   },
   {
@@ -156,8 +157,8 @@ const CATEGORIES = [
   {
     ar: "تتبيلة حاتي تركي", en: "Turkish marinade", icon: "🥙",
     items: [
-      { ar: "فرخة كاملة متبلة تركي", en: "Turkish marinated whole chicken", price: 195, unit: "kg", img: "images/turkish-marinated-whole-chicken.jpg", opts: ["cut"] },
-      { ar: "أوراك بالعظم متبلة تركي", en: "Turkish marinated bone-in thighs", price: 195, unit: "kg", img: "images/turkish-marinated-bone-in-thighs.jpg" },
+      { ar: "فرخة كاملة متبلة تركي", en: "Turkish marinated whole chicken", price: 230, unit: "kg", img: "images/turkish-marinated-whole-chicken.jpg", opts: ["cut"] },
+      { ar: "أوراك بالعظم متبلة تركي", en: "Turkish marinated bone-in thighs", price: 230, unit: "kg", img: "images/turkish-marinated-bone-in-thighs.jpg" },
       { ar: "شيش طاوق تركي", en: "Turkish tawook shish", price: 295, unit: "kg", img: "images/turkish-marinated-shish.jpg" },
       { ar: "سيخ شاورما تركي", en: "Turkish shawarma skewer", price: 330, unit: "kg", img: "images/turkish-shawarma-skewer.jpg" },
       { ar: "شاورما شرائح تركي", en: "Turkish shawarma slices", price: 299, unit: "kg", img: "images/turkish-shawarma-slices.jpg" },
@@ -168,25 +169,27 @@ const CATEGORIES = [
   {
     ar: "تتبيلة مكسيكي", en: "Mexican marinade", icon: "🌶️",
     items: [
+      { ar: "فرخة كاملة متبلة مكسيكي", en: "Mexican marinated whole chicken", price: 230, unit: "kg", img: "images/mexican-marinated-whole-chicken.jpg", opts: ["cut"] },
       { ar: "أجنحة متبلة مكسيكي", en: "Mexican marinated wings", price: 170, unit: "kg", img: "images/mexican-marinated-wings.jpg" },
-      { ar: "دبابيس متبلة مكسيكي", en: "Mexican marinated drumsticks", price: 240, unit: "kg", img: "images/mexican-marinated-drumsticks.jpg" },
-      { ar: "صدور متبلة مكسيكي", en: "Mexican marinated breasts", price: 299, unit: "kg", img: "images/mexican-marinated-breasts.jpg" }
+      { ar: "دبابيس متبلة مكسيكي", en: "Mexican marinated drumsticks", price: 250, unit: "kg", img: "images/mexican-marinated-drumsticks.jpg" },
+      { ar: "صدور متبلة مكسيكي", en: "Mexican marinated breasts", price: 330, unit: "kg", img: "images/mexican-marinated-breasts.jpg" }
     ]
   },
   {
     ar: "تتبيلة يوناني أعشاب", en: "Greek herb marinade", icon: "🌿",
     items: [
-      { ar: "دبابيس متبلة يوناني", en: "Greek marinated drumsticks", price: 240, unit: "kg", img: "images/greek-marinated-drumsticks.jpg" },
-      { ar: "صدور متبلة يوناني", en: "Greek marinated breasts", price: 299, unit: "kg", img: "images/greek-marinated-breasts.jpg" },
-      { ar: "شيش متبلة يوناني", en: "Greek marinated shish", price: 299, unit: "kg", img: "images/greek-marinated-shish.jpg" }
+      { ar: "فرخة كاملة متبلة يوناني", en: "Greek marinated whole chicken", price: 230, unit: "kg", img: "images/greek-marinated-whole-chicken.jpg", opts: ["cut"] },
+      { ar: "دبابيس متبلة يوناني", en: "Greek marinated drumsticks", price: 250, unit: "kg", img: "images/greek-marinated-drumsticks.jpg" },
+      { ar: "صدور متبلة يوناني", en: "Greek marinated breasts", price: 330, unit: "kg", img: "images/greek-marinated-breasts.jpg" },
+      { ar: "شيش متبلة يوناني", en: "Greek marinated shish", price: 330, unit: "kg", img: "images/greek-marinated-shish.jpg" }
     ]
   },
   {
     ar: "تتبيلة سويت اند سور", en: "Sweet & sour marinade", icon: "🍯",
     items: [
       { ar: "أجنحة سويت اند سور", en: "Sweet & sour wings", price: 170, unit: "kg", img: "images/sweet-sour-wings.jpg" },
-      { ar: "دبابيس سويت اند سور", en: "Sweet & sour drumsticks", price: 240, unit: "kg", img: "images/sweet-sour-drumsticks.jpg" },
-      { ar: "بانية سويت اند سور", en: "Sweet & sour cutlets", price: 299, unit: "kg", img: "images/sweet-sour-cutlets.jpg" }
+      { ar: "دبابيس سويت اند سور", en: "Sweet & sour drumsticks", price: 250, unit: "kg", img: "images/sweet-sour-drumsticks.jpg" },
+      { ar: "بانية سويت اند سور", en: "Sweet & sour cutlets", price: 330, unit: "kg", img: "images/sweet-sour-cutlets.jpg" }
     ]
   },
   {
@@ -201,7 +204,7 @@ const CATEGORIES = [
     ]
   },
   {
-    ar: "صوص طبيعي", en: "Natural sauces", icon: "🥫",
+    ar: "تيستي اند هيلثي", en: "Tasty & Healthy", icon: "🥫",
     items: [
       { ar: "كاتشب طبيعي", en: "Natural ketchup", price: 45, unit: "box", img: "images/natural-ketchup.jpg" },
       { ar: "ثومية طبيعي", en: "Natural garlic sauce", price: 55, unit: "box", img: "images/natural-garlic-sauce.jpg" },  // ⚠ سعر تقديري
