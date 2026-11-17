@@ -139,7 +139,7 @@ const CATEGORIES = [
       { ar: "كفتة فراخ سادة", en: "Plain chicken kofta", price: 299, unit: "kg", img: "images/natural-chicken-kofta.jpg" },
       { ar: "مسحب فراخ سادة", en: "Plain pulled chicken", price: 299, unit: "kg", img: "images/natural-pulled-chicken.jpg" },
       { ar: "برجر فراخ بحشو الجبنة", en: "Cheese-stuffed chicken burger", price: 330, unit: "kg", img: "images/cheese-stuffed-chicken-burger.jpg" },
-      { ar: "صدور مدخنة", en: "Smoked chicken breasts", price: 330, unit: "kg" }
+            { ar: "صدور مدخنة", en: "Smoked chicken breasts", price: 330, unit: "kg", img: "images/smoked-breasts.webp" }
     ]
   },
   {
@@ -169,7 +169,7 @@ const CATEGORIES = [
   {
     ar: "تتبيلة مكسيكي", en: "Mexican marinade", icon: "🌶️",
     items: [
-      { ar: "فرخة كاملة متبلة مكسيكي", en: "Mexican marinated whole chicken", price: 230, unit: "kg", opts: ["cut"] },
+           { ar: "فرخة كاملة متبلة مكسيكي", en: "Mexican marinated whole chicken", price: 230, unit: "kg", img: "images/mexican-marinated-whole-chicken.webp", opts: ["cut"] },
       { ar: "أجنحة متبلة مكسيكي", en: "Mexican marinated wings", price: 170, unit: "kg", img: "images/mexican-marinated-wings.jpg" },
       { ar: "دبابيس متبلة مكسيكي", en: "Mexican marinated drumsticks", price: 250, unit: "kg", img: "images/mexican-marinated-drumsticks.jpg" },
       { ar: "صدور متبلة مكسيكي", en: "Mexican marinated breasts", price: 330, unit: "kg", img: "images/mexican-marinated-breasts.jpg" }
@@ -178,7 +178,7 @@ const CATEGORIES = [
   {
     ar: "تتبيلة يوناني أعشاب", en: "Greek herb marinade", icon: "🌿",
     items: [
-      { ar: "فرخة كاملة متبلة يوناني", en: "Greek marinated whole chicken", price: 230, unit: "kg", opts: ["cut"] },
+            { ar: "فرخة كاملة متبلة يوناني", en: "Greek marinated whole chicken", price: 230, unit: "kg", img: "images/greek-marinated-whole-chicken.webp", opts: ["cut"] },
       { ar: "دبابيس متبلة يوناني", en: "Greek marinated drumsticks", price: 250, unit: "kg", img: "images/greek-marinated-drumsticks.jpg" },
       { ar: "صدور متبلة يوناني", en: "Greek marinated breasts", price: 330, unit: "kg", img: "images/greek-marinated-breasts.jpg" },
       { ar: "شيش متبلة يوناني", en: "Greek marinated shish", price: 330, unit: "kg", img: "images/greek-marinated-shish.jpg" }
