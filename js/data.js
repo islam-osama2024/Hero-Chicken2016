@@ -139,7 +139,7 @@ const CATEGORIES = [
       { ar: "كفتة فراخ سادة", en: "Plain chicken kofta", price: 299, unit: "kg", img: "images/natural-chicken-kofta.jpg" },
       { ar: "مسحب فراخ سادة", en: "Plain pulled chicken", price: 299, unit: "kg", img: "images/natural-pulled-chicken.jpg" },
       { ar: "برجر فراخ بحشو الجبنة", en: "Cheese-stuffed chicken burger", price: 330, unit: "kg", img: "images/cheese-stuffed-chicken-burger.jpg" },
-            { ar: "صدور مدخنة", en: "Smoked chicken breasts", price: 330, unit: "kg", img: "images/smoked-breasts.webp" }
+      { ar: "صدور مدخنة", en: "Smoked chicken breasts", price: 330, unit: "kg", img: "images/smoked-chicken-breasts.webp" }
     ]
   },
   {
@@ -150,7 +150,7 @@ const CATEGORIES = [
       { ar: "بانية بروست", en: "Broasted cutlets", price: 299, unit: "kg", img: "images/broasted-cutlets.jpg" },
       { ar: "أجنحة بروست", en: "Broasted wings", price: 150, unit: "kg", img: "images/broasted-wings.jpg" },
       { ar: "صوابع جبنة موزاريلا", en: "Mozzarella cheese sticks", price: 270, unit: "kg", img: "images/mozzarella-sticks.jpg" },
-      { ar: "كوردن بلو فرنسي شوي", en: "French cordon bleu (grilled)", price: 350, unit: "kg", img: "images/cordon-bleu.jpg" },
+      { ar: "كوردن بلو فرنسي شوي", en: "French cordon bleu (grilled)", price: 350, unit: "kg", img: "images/chicken-roll.jpg" },
       { ar: "كوردن بلو فرنسي قلي", en: "French cordon bleu (fried)", price: 370, unit: "kg", img: "images/cordon-bleu.jpg" }
     ]
   },
