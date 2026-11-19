@@ -151,7 +151,9 @@ const CATEGORIES = [
       { ar: "أجنحة بروست", en: "Broasted wings", price: 150, unit: "kg", img: "images/broasted-wings.jpg" },
       { ar: "صوابع جبنة موزاريلا", en: "Mozzarella cheese sticks", price: 270, unit: "kg", img: "images/mozzarella-sticks.jpg" },
       { ar: "كوردن بلو فرنسي شوي", en: "French cordon bleu cordon (grilled)", price: 350, unit: "kg", img: "images/chicken-roll.jpg" },
-      { ar: "كوردن بلو فرنسي قلي", en: "French cordon bleu (fried)", price: 370, unit: "kg", img: "images/cordon-bleu.jpg" }
+      { ar: "كوردن بلو فرنسي قلي", en: "French cordon bleu (fried)", price: 370, unit: "kg", img: "images/cordon-bleu.jpg" },
+      { ar: "زنجر سبايسي", en: "Zinger (fried)", price:300, unit: "kg", img: "images/spicy-zinger.jpg" },
+      { ar: "بروست قطع متنوعة", en: "brost (fried)", price:250, unit: "kg", img: "images/broasted-mix.jpg" }
     ]
   },
   {
