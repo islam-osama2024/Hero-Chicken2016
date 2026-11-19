@@ -26,10 +26,10 @@ const CONFIG = {
 
   // بنر العروض (فاضي = مش بيظهر). bg: "green" أو "gold". ضيف عرض جديد بنفس الشكل.
   banners: [
-    { ar: "فراخ فريش وكل أنواع الفراخ المتبلة الجاهزة بجميع الخلطات 🍗", en: "Fresh chicken and ready marinated chicken in every flavor 🍗", bg: "green" },
-    { ar: "اطلب دلوقتي وإحنا نوصلهالك 🛵", en: "Order now and we will deliver it 🛵", bg: "gold" }
+    { ar: "🔥 عرض الويك إند بـ 500 ج بس! طبق زنجر أو برجر (4 قطع) أو بروست أو أجنحة بأي تتبيلة من اختيارك 🍗", en: "🔥 Weekend offer for only 500 EGP! Choose a plate of Zinger, Burger (4 pcs), Broasted, or Wings in any marinade 🍗", bg: "green" },
+    { ar: "🔥 عرض الويك إند بـ 500 ج! 3 سيخ شيش طاووق أو طبق شاورما تركي أو دبابيس يوناني أو أجنحة بأي تتبيلة 😋", en: "🔥 Weekend offer for 500 EGP! 3 Tawook shish skewers, Turkish shawarma plate, Greek drumsticks, or Wings in any marinade 😋", bg: "gold" },
+    { ar: "اطلب دلوقتي وإحنا نوصلهالك 🛵", en: "Order now and we will deliver it 🛵", bg: "green" }
   ],
-
   // الإحصائيات (اختياري): كود GA4 زي "G-XXXXXXXXXX" و/أو توكن Cloudflare Web Analytics
   analytics: { ga4: "", cloudflareToken: "" },
 
