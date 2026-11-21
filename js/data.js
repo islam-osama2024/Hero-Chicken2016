@@ -99,7 +99,7 @@ const CATEGORIES = [
   {
     ar: "حي فريش", en: "Live & fresh", icon: "🐔",
     items: [
-      { ar: "فراخ أبيض", en: "White chicken", price: 80, unit: "kg", img: "images/whole.jpg", opts: ["cut"] },
+      { ar: "فراخ أبيض", en: "White chicken", price: 79, unit: "kg", img: "images/whole.jpg", opts: ["cut"] },
       { ar: "فراخ ساسو", en: "Sasso chicken", price: 130, unit: "kg", img: "images/sasso-chicken.jpg", opts: ["cut"] },
       { ar: "فراخ بلدي", en: "Baladi chicken", price: 140, unit: "kg", img: "images/grilled.jpg", opts: ["cut"] },
       { ar: "فراخ عتاقي", en: "Ataqi chicken", price: 100, unit: "kg", img: "images/ataqi-chicken.jpg", opts: ["cut"] },
@@ -114,11 +114,11 @@ const CATEGORIES = [
     ar: "قطعيات أبيض سادة", en: "Plain white cuts", icon: "🍗",
     items: [
       { ar: "صدور بالعظم سادة", en: "Bone-in breasts", price: 150, unit: "kg", img: "images/breasts.jpg" },
-      { ar: "بانية سادة", en: "Plain breast cutlets", price: 210, unit: "kg", img: "images/plain-breast-cutlets.jpg" },
+      { ar: "بانية سادة", en: "Plain breast cutlets", price: 200, unit: "kg", img: "images/plain-breast-cutlets.jpg" },
       { ar: "استريبس سادة", en: "Plain strips", price: 220, unit: "kg", img: "images/plain-strips.jpg" },
       { ar: "شاورما سادة", en: "Plain shawarma", price: 210, unit: "kg", img: "images/plain-shawarma.jpg" },
       { ar: "أجنحة سادة", en: "Plain wings", price: 75, unit: "kg", img: "images/plain-wings.jpg" },
-      { ar: "أوراك بالعضم سادة", en: "Bone-in thighs", price: 90, unit: "kg", img: "images/pieces.jpg" },
+      { ar: "أوراك بالعضم سادة", en: "Bone-in thighs", price: 85, unit: "kg", img: "images/pieces.jpg" },
       { ar: "أوراك مخلية سادة", en: "Boneless thighs", price: 195, unit: "kg", img: "images/boneless-thighs.jpg" },
       { ar: "دبابيس سادة", en: "Plain drumsticks", price: 130, unit: "kg", img: "images/plain-drumsticks.jpg" },
       { ar: "شيش سادة", en: "Plain shish", price: 195, unit: "kg", img: "images/plain-shish.jpg" },
