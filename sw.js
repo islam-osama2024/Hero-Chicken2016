@@ -2,8 +2,8 @@
    الصفحة والكود (html / js / css) بنسأل السيرفر عنهم في كل مرة (no-cache)،
    فلو اتغيروا بيجيبوا النسخة الجديدة فورًا، ولو ما اتغيروش السيرفر بيرد "ما اتغيرش" (304) وبيوفّر التحميل.
    الصور والفيديو بتتاخد من الكاش العادي عشان السرعة. ولو مفيش نت بنستخدم آخر نسخة محفوظة. */
-const CACHE = "hc-v3-mobile";
-const CORE = ["./", "index.html", "css/style.css", "js/data.js", "js/main.js", "images/logo.png", "manifest.webmanifest"];
+const CACHE = "hc-v4-mobile";
+const CORE = ["./", "index.html", "css/style.css", "js/data.js", "js/main.js", "css/concept.css", "images/opt/logo.png", "manifest.webmanifest"];
 const CODE = /\.(?:html|js|css|json|webmanifest)$/i;
 
 self.addEventListener("install", (e) => {
