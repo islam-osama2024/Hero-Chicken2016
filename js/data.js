@@ -256,6 +256,16 @@ const CATEGORIES = [
 /* ---------- 3) النصوص (عربي / إنجليزي) ---------- */
 const TEXT = {
   ar: {
+    installShort: "📲 ثبّت المنيو",
+    whatsappContact: "تواصل على واتساب",
+    knownAmount: "المبلغ المحسوب",
+    deliveryHint: "🛵 بنها وخارج بنها • رسوم التوصيل عند التأكيد",
+    deliveryPending: "المبلغ لا يشمل التوصيل. هنأكد الرسوم والإجمالي النهائي معاك على واتساب قبل تأكيد الطلب.",
+    offersTitle: "🔥 عروض الويك إند",
+    offerDetails: "شوف التفاصيل",
+    offerNote: "لتأكيد محتويات العرض والكميات والتوافر، تواصل مع المحل قبل الطلب.",
+    quickActions: "إجراءات سريعة",
+    productOptions: "اختيارات الصنف",
     tagline: "طبيعي - طازج - جاهز للطبخ 💪",
     kg: "كيلو", pc: "قطعة", tray: "طبق", box: "علبة", bag: "كيس", unit: "واحدة", pack: "عبوة",
     add: "أضف",
@@ -303,6 +313,16 @@ const TEXT = {
     switchTo: "EN"
   },
   en: {
+    installShort: "📲 Install menu",
+    whatsappContact: "Chat on WhatsApp",
+    knownAmount: "Known amount",
+    deliveryHint: "🛵 Benha & outside Benha • Delivery fee confirmed later",
+    deliveryPending: "Delivery is not included. The fee and final total will be confirmed with you on WhatsApp before the order is confirmed.",
+    offersTitle: "🔥 Weekend offers",
+    offerDetails: "View details",
+    offerNote: "Contact the shop to confirm offer contents, quantities and availability before ordering.",
+    quickActions: "Quick actions",
+    productOptions: "Product options",
     tagline: "Natural - Fresh - Ready to cook 💪",
     kg: "kg", pc: "pc", tray: "tray", box: "box", bag: "bag", unit: "unit", pack: "pack",
     add: "Add",
