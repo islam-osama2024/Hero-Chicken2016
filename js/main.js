@@ -402,6 +402,15 @@ function orderCalc() {
 }
 const feeText = (a) => a.fee === null ? txt().feeLater : a.fee ? money(a.fee) : txt().free;
 
+const PAY_LOGOS = [
+  { match: "فودافون", svg: `<svg viewBox="4.6 18.3 34.8 34.9" aria-hidden="true"><path fill-rule="evenodd" fill="#e60000" d="m4.6 35.7c0-9.6 7.8-17.4 17.4-17.4 9.5 0 17.3 7.8 17.3 17.4 0 9.7-7.8 17.5-17.3 17.5-9.6 0-17.4-7.8-17.4-17.5zm7.7-0.9c0.1 6.6 5 10.7 9.8 10.7 5.9-0.1 9.4-4.9 9.3-9.4 0-4.4-2.4-7.6-7.7-8.9 0 0 0-0.1 0-0.3 0-3.3 2.5-6.3 5.7-6.9-0.3-0.1-0.8-0.2-1.3-0.2-3.6 0.1-7.6 1.6-10.5 4-2.9 2.5-5.3 6.7-5.3 11z"/></svg>` },
+  { match: "إنستاباي", img: "data:image/png;base64,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" }
+];
+const payLogo = (p) => {
+  const f = PAY_LOGOS.find((x) => p.ar.includes(x.match));
+  if (!f) return "";
+  return f.svg ? `<span class="pay-logo">${f.svg}</span>` : `<img class="pay-logo" src="${f.img}" alt="">`;
+};
 function renderDelivery() {
   const t = txt(), o = orderCalc();
   $("modeDel").textContent = "🛵 " + t.deliveryMode;
@@ -422,7 +431,7 @@ function renderDelivery() {
   $("hoursNote").textContent = isOpenNow() ? "" : `${t.closedNote} ${fmtTime(CONFIG.hours.open)}`;
   $("paySec").hidden = !PAYS.length;
   $("payTitle").textContent = t.payTitle;
-  $("payRow").innerHTML = PAYS.map((p, k) => `<button type="button" class="pill${k === payIdx ? " is-on" : ""}" data-action="pay" data-k="${k}">${p[lang]}</button>`).join("");
+  $("payRow").innerHTML = PAYS.map((p, k) => `<button type="button" class="pill${k === payIdx ? " is-on" : ""}" data-action="pay" data-k="${k}">${payLogo(p)}${p[lang]}</button>`).join("");
   $("forgetBtn").textContent = t.forget;
   $("sendBtn").disabled = o.blocked;
   $("custPhone").placeholder = t.phone + (o.del ? " *" : "");
@@ -611,9 +620,28 @@ function setupHeroVideo() {
   if (!v) return;
   v.muted = true;                                          // ضروري عشان التشغيل التلقائي
   const src = v.querySelector("source");
-  if (src) src.addEventListener("error", () => v.remove()); // لو الملف مش موجود نشيله
-  const p = v.play && v.play();
-  if (p && p.catch) p.catch(() => {});
+  if (!src || !src.dataset.src) { v.remove(); return; }
+  const conn = navigator.connection || {};
+  if (conn.saveData || /(^|-)2g$/.test(conn.effectiveType || "")) { v.remove(); return; } // نت ضعيف جداً: من غير فيديو خالص
+  let started = false;
+  const start = () => {
+    if (started) return; started = true;
+    src.src = src.dataset.src;
+    src.addEventListener("error", () => v.remove(), { once: true }); // لو الملف مش موجود نشيله
+    v.load();
+    const p = v.play && v.play();
+    if (p && p.catch) p.catch(() => {});
+  };
+  // الفيديو (1.1 ميجا) بيستنى لما صور أول شاشة تخلص تحميل، بحد أقصى 8 ثواني، عشان ما ياخدش مكانها على النت البطيء
+  const firstImgs = [...document.querySelectorAll(".card img")].filter((im) => im.getBoundingClientRect().top < innerHeight);
+  if (!firstImgs.length) { start(); return; }
+  const timer = setTimeout(start, 8000);
+  let left = firstImgs.length;
+  const one = () => { if (--left <= 0) { clearTimeout(timer); start(); } };
+  firstImgs.forEach((im) => {
+    if (im.complete) one();
+    else { im.addEventListener("load", one, { once: true }); im.addEventListener("error", one, { once: true }); }
+  });
 }
 
 /* ---------- تشغيل ---------- */
@@ -623,12 +651,12 @@ setupFab();
 injectSchema();
 loadAnalytics();
 setupPWA();
-setupHeroVideo();
 setInterval(() => { renderStatus(); renderDate(); }, 60000);
 document.addEventListener("visibilitychange", () => { if (!document.hidden) { renderStatus(); renderDate(); } });
 renderStatic();
 renderMenu();
 updateCartBar();
+setupHeroVideo();
 
 /* Keep the menu still behind an open sheet and restore keyboard focus. */
 let lastFocus = null;
