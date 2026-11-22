@@ -42,6 +42,10 @@ function renderStatic() {
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   $("langBtn").textContent = t.switchTo;
   $("tagline").textContent = t.tagline;
+  $("deliveryHint").textContent = t.deliveryHint;
+  $("fabWrap").setAttribute("aria-label", t.quickActions);
+  $("search").setAttribute("aria-label", t.search);
+  $("itemSheet").setAttribute("aria-label", t.productOptions);
   $("cartTitle").textContent = t.orderTitle;
   $("totalLabel").textContent = t.total;
   $("sendBtn").textContent = t.send;
@@ -56,10 +60,13 @@ function renderStatic() {
   $("backBtn").textContent = t.back;
   renderFooter();
   renderStatus();
+  renderDate();
   renderBanner();
   if ($("waFab").firstChild) updateFab();
   $("search").placeholder = t.search;
-  $("installBtn").textContent = t.install;
+  $("installBtn").textContent = t.installShort;
+  $("installBtn").setAttribute("aria-label", t.install);
+  if (!$("installHint").hidden) renderInstallHint();
 }
 
 function renderFooter() {
@@ -153,11 +160,12 @@ function applySearch() {
 function updateFab() {
   const t = txt();
   $("waFab").href = `https://wa.me/${CONFIG.phone}?text=${encodeURIComponent(t.waHello)}`;
-  $("waFab").setAttribute("aria-label", "WhatsApp");
+  $("waFab").setAttribute("aria-label", t.whatsappContact);
+  $("waFab").querySelector(".fab__label").textContent = t.whatsappContact;
   $("toTop").setAttribute("aria-label", t.toTop);
 }
 function setupFab() {
-  $("waFab").innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS.whatsapp}</svg>`;
+  $("waFab").innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS.whatsapp}</svg><span class="fab__label"></span>`;
   $("toTop").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   const onScroll = () => {
     $("toTop").hidden = window.scrollY < 400;
@@ -170,17 +178,13 @@ function setupFab() {
 /* ---------- بنر العروض ---------- */
 let bannerIdx = 0, bannerTimer;
 function renderBanner() {
-  const list = CONFIG.banners || [], el = $("banner");
+  const list = CONFIG.banners || [], el = $("banner"), t = txt();
   el.hidden = !list.length;
-  clearInterval(bannerTimer); bannerIdx = 0;
+  clearInterval(bannerTimer);
   if (!list.length) return;
-  el.innerHTML = `<div class="banner__track" id="bannerTrack">` +
-    list.map((b) => `<div class="banner__slide banner--${b.bg || "green"}">${b[lang]}</div>`).join("") + `</div>`;
-  if (list.length > 1) bannerTimer = setInterval(() => {
-    const tr = $("bannerTrack");
-    bannerIdx = (bannerIdx + 1) % list.length;
-    tr.scrollTo({ left: bannerIdx * tr.clientWidth * (document.documentElement.dir === "rtl" ? -1 : 1), behavior: "smooth" });
-  }, 4500);
+  el.innerHTML = `<details class="offers"><summary><span>${t.offersTitle}</span><span class="offers__toggle">${t.offerDetails} <span aria-hidden="true">⌄</span></span></summary>
+    <div class="offers__body">${list.map((b) => `<p class="offers__entry">${esc(b[lang])}</p>`).join("")}
+    <p class="offers__note">${t.offerNote}</p></div></details>`;
 }
 
 /* ---------- بيانات المحل لجوجل (Schema.org) ---------- */
@@ -228,6 +232,10 @@ const track = (name, params) => { if (window.gtag) window.gtag("event", name, pa
 
 /* ---------- تثبيت المنيو كتطبيق (PWA) ---------- */
 let installEvt = null;
+function renderInstallHint() {
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  $("installHint").textContent = ios ? txt().installIos : txt().installOther;
+}
 function setupPWA() {
   const ok = location.protocol === "https:" || ["localhost", "127.0.0.1"].includes(location.hostname);
   if (ok && "serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
@@ -236,9 +244,12 @@ function setupPWA() {
   btn.hidden = !!standalone;                         // الزر ثابت، ويختفي بس لو المنيو مفتوح كتطبيق
   window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); installEvt = e; });
   btn.addEventListener("click", async () => {
-    if (installEvt) { installEvt.prompt(); await installEvt.userChoice; installEvt = null; return; }
-    const ios = /iphone|ipad|ipod/i.test(navigator.userAgent);   // لو المتصفح مش بيدعم التثبيت المباشر نوريه الخطوات
-    $("installHint").textContent = ios ? txt().installIos : txt().installOther;
+    if (installEvt) {
+      const event = installEvt; installEvt = null;
+      try { await event.prompt(); await event.userChoice; return; } catch (e) { /* Show manual steps if native installation is unavailable. */ }
+    }
+    // لو المتصفح مش بيدعم التثبيت المباشر نوريه الخطوات
+    renderInstallHint();
     $("installHint").hidden = false;
   });
   window.addEventListener("appinstalled", () => { btn.hidden = true; $("installHint").hidden = true; track("pwa_installed"); });
@@ -352,6 +363,14 @@ function nowMin() {
   return g("hour") * 60 + g("minute");
 }
 const isOpenNow = () => { const n = nowMin(); return n >= toMin(CONFIG.hours.open) && n < toMin(CONFIG.hours.close); };
+function renderDate() {
+  const locale = lang === "ar" ? "ar-EG" : "en-GB";
+  const now = new Date(), zone = CONFIG.hours.tz, el = $("todayDate");
+  el.textContent = new Intl.DateTimeFormat(locale, { timeZone: zone, weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(now);
+  const parts = new Intl.DateTimeFormat("en-CA", { timeZone: zone, year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(now);
+  const part = key => parts.find(p => p.type === key).value;
+  el.dateTime = `${part("year")}-${part("month")}-${part("day")}`;
+}
 function fmtTime(hhmm) {
   const hr = Math.floor(toMin(hhmm) / 60) % 24, mn = toMin(hhmm) % 60;
   const suf = lang === "ar" ? (hr < 12 ? "ص" : "م") : (hr < 12 ? "AM" : "PM");
@@ -391,8 +410,9 @@ function renderDelivery() {
   $("locStatus").textContent = { none: "", wait: t.locWait, ok: t.locOk, fail: t.locFail }[locState];
   $("feeRows").innerHTML = `<div class="fee-row"><span>${t.subtotal}</span><span>${money(o.total)}</span></div>` +
     (o.del ? `<div class="fee-row"><span>${t.deliveryFee}</span><span>${feeText(o.a)}</span></div>` : "");
-  $("totalValue").textContent = money(o.grand) + (o.pending ? " +" : "");
-  $("cartNote").textContent = o.hasUnpriced ? t.unpricedNote : "";
+  $("totalLabel").textContent = o.hasUnpriced ? t.knownAmount : o.pending ? t.subtotal : t.total;
+  $("totalValue").textContent = money(o.grand);
+  $("cartNote").textContent = [o.hasUnpriced ? t.unpricedNote : "", o.del && o.fee === null ? t.deliveryPending : ""].filter(Boolean).join(" ");
   $("formMsg").textContent = o.blocked ? t.minMsg.replace("{min}", money(o.min)).replace("{left}", money(o.left)) : "";
   $("hoursNote").textContent = isOpenNow() ? "" : `${t.closedNote} ${fmtTime(CONFIG.hours.open)}`;
   $("paySec").hidden = !PAYS.length;
@@ -457,7 +477,9 @@ function sendOrder() {
   msg += "\n\n" + (o.del
     ? `🛵 *${t.deliveryMode}* — ${o.a[lang]}` + (o.fee === null ? ` (${t.deliveryFee}: ${t.feeLater})` : o.fee ? ` (${t.deliveryFee}: ${money(o.fee)})` : "")
     : `🏪 *${t.pickupMode}*`);
-  msg += `\n*${t.total}:* ${money(o.grand)}${o.pending ? " +" : ""}`;
+  msg += `\n*${(o.hasUnpriced ? t.knownAmount : o.pending ? t.subtotal : t.total)}:* ${money(o.grand)}`;
+  if (o.hasUnpriced) msg += `\n${t.unpricedNote}`;
+  if (o.del && o.fee === null) msg += `\n${t.deliveryPending}`;
   if (PAYS.length) msg += `\n💳 ${t.payTitle}: ${PAYS[payIdx][lang]}`;
   if (o.del && geo) msg += `\n📍 https://maps.google.com/?q=${geo.lat},${geo.lng}`;
   if (!isOpenNow()) msg += `\n⏰ ${t.offHours}`;
@@ -564,6 +586,8 @@ $("itemSheet").addEventListener("click", (e) => { if (e.target === $("itemSheet"
 $("langBtn").addEventListener("click", () => {
   lang = lang === "ar" ? "en" : "ar";
   renderStatic(); renderMenu(); updateCartBar();
+  if ($("sheet").classList.contains("is-open")) renderCart();
+  if (cur) renderItem();
 });
 $("cartBar").addEventListener("click", openCart);
 $("closeBtn").addEventListener("click", closeCart);
@@ -595,7 +619,33 @@ injectSchema();
 loadAnalytics();
 setupPWA();
 setupHeroVideo();
-setInterval(renderStatus, 60000);
+setInterval(() => { renderStatus(); renderDate(); }, 60000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) { renderStatus(); renderDate(); } });
 renderStatic();
 renderMenu();
 updateCartBar();
+
+/* Keep the menu still behind an open sheet and restore keyboard focus. */
+let lastFocus = null;
+const sheetNodes = [$("itemSheet"), $("sheet")];
+const syncSheets = () => {
+  const opened = sheetNodes.find(el => el.classList.contains("is-open"));
+  document.body.classList.toggle("sheet-open", !!opened);
+  if (opened) {
+    if (!lastFocus) lastFocus = document.activeElement;
+    if (!opened.contains(document.activeElement)) opened.querySelector("button, input, select, textarea, a[href]")?.focus();
+  } else if (lastFocus) {
+    lastFocus.focus(); lastFocus = null;
+  }
+};
+sheetNodes.forEach(el => new MutationObserver(syncSheets).observe(el, {attributes: true, attributeFilter: ["class"]}));
+document.addEventListener("keydown", e => {
+  const opened = sheetNodes.find(el => el.classList.contains("is-open"));
+  if (!opened) return;
+  if (e.key === "Escape") { closeItem(); closeCart(); }
+  if (e.key !== "Tab") return;
+  const fields = [...opened.querySelectorAll('button:not(:disabled), input, select, textarea, a[href]')].filter(el => el.getClientRects().length);
+  const first = fields[0], last = fields[fields.length - 1];
+  if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last?.focus(); }
+  else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus(); }
+});
