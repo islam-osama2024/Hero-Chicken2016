@@ -340,7 +340,7 @@ function updateCartBar() {
   saveCart();
   document.body.classList.toggle("has-cart", lines.length > 0);
   $("cartBar").classList.toggle("is-visible", lines.length > 0);
-  $("cartCount").textContent = `${txt().viewOrder} (${lines.length} ${txt().itemsWord})`;
+  $("cartCount").textContent = `${txt().viewOrder} (${lines.length} ${lines.length === 1 ? txt().itemWord : txt().itemsWord})`;
   $("cartTotal").textContent = total ? money(total) : "";
 }
 
@@ -415,7 +415,7 @@ function renderDelivery() {
   $("locStatus").textContent = { none: "", wait: t.locWait, ok: t.locOk, fail: t.locFail }[locState];
   $("feeRows").innerHTML = `<div class="fee-row"><span>${t.subtotal}</span><span>${money(o.total)}</span></div>` +
     (o.del ? `<div class="fee-row"><span>${t.deliveryFee}</span><span>${feeText(o.a)}</span></div>` : "");
-  $("totalLabel").textContent = o.hasUnpriced ? t.knownAmount : o.pending ? t.subtotal : t.total;
+  $("totalLabel").textContent = o.hasUnpriced ? t.knownAmount : o.pending ? t.totalBeforeDelivery : t.total;
   $("totalValue").textContent = money(o.grand);
   $("cartNote").textContent = [o.hasUnpriced ? t.unpricedNote : "", o.del && o.fee === null ? t.deliveryPending : ""].filter(Boolean).join(" ");
   $("formMsg").textContent = o.blocked ? t.minMsg.replace("{min}", money(o.min)).replace("{left}", money(o.left)) : "";
