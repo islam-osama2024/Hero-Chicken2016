@@ -264,7 +264,7 @@ function cardHTML(cat, item, c, i) {
   const t = txt();
   const price = item.price === null ? `<small>${t.askPrice}</small>` : `${item.oldPrice ? `<s>${item.oldPrice}</s> ` : ""}${money(item.price)} <small>/ ${t[item.unit]}</small>`;
   const badge = item.soldOut ? `<span class="badge badge--out">${t.soldOut}</span>` : item.badge ? `<span class="badge badge--${item.badge}">${t["badge_" + item.badge]}</span>` : "";
-  const img = item.img ? `<img src="${item.img}" alt="" loading="lazy" data-fb="${cat.icon}" onerror="this.parentNode.textContent=this.dataset.fb">` : cat.icon;
+  const img = item.img ? `<img src="${item.img.replace("images/","images/opt/")}" alt="" loading="lazy" data-fb="${cat.icon}" data-o="${item.img}" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=this.dataset.o}else{this.parentNode.textContent=this.dataset.fb}">` : cat.icon;
   return `<article class="card${item.soldOut ? " card--out" : ""}" data-s="${norm(item.ar + " " + item.en)}">${badge}
       <div class="card__img">${img}</div>
       <div class="card__name">${item[lang]}</div>
