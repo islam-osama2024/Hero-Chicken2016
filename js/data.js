@@ -1,4 +1,4 @@
-/* =========================================================
+see/* =========================================================
    Hero Chicken - data.js
    كل اللي بتغيره بإيدك (رقم الواتساب، الأسعار، الأصناف، النصوص)
    موجود هنا. ملف main.js مش محتاج تلمسه.
@@ -99,7 +99,7 @@ const CATEGORIES = [
   {
     ar: "حي فريش", en: "Live & fresh", icon: "🐔",
     items: [
-      { ar: "فراخ أبيض", en: "White chicken", price: 79, unit: "kg", img: "images/whole.jpg", opts: ["cut"] },
+      { ar: "فراخ أبيض", en: "White chicken", price: 75, unit: "kg", img: "images/whole.jpg", opts: ["cut"] },
       { ar: "فراخ ساسو", en: "Sasso chicken", price: 130, unit: "kg", img: "images/sasso-chicken.jpg", opts: ["cut"] },
       { ar: "فراخ بلدي", en: "Baladi chicken", price: 140, unit: "kg", img: "images/grilled.jpg", opts: ["cut"] },
       { ar: "فراخ عتاقي", en: "Ataqi chicken", price: 100, unit: "kg", img: "images/ataqi-chicken.jpg", opts: ["cut"] },
@@ -117,11 +117,11 @@ const CATEGORIES = [
       { ar: "بانية سادة", en: "Plain breast cutlets", price: 200, unit: "kg", img: "images/plain-breast-cutlets.jpg" },
       { ar: "استريبس سادة", en: "Plain strips", price: 210, unit: "kg", img: "images/plain-strips.jpg" },
       { ar: "شاورما سادة", en: "Plain shawarma", price: 200, unit: "kg", img: "images/plain-shawarma.jpg" },
-      { ar: "أجنحة سادة", en: "Plain wings", price: 75, unit: "kg", img: "images/plain-wings.jpg" },
-      { ar: "أوراك بالعضم سادة", en: "Bone-in thighs", price: 85, unit: "kg", img: "images/pieces.jpg" },
+      { ar: "أجنحة سادة", en: "Plain wings", price: 70, unit: "kg", img: "images/plain-wings.jpg" },
+      { ar: "أوراك بالعضم سادة", en: "Bone-in thighs", price: 80, unit: "kg", img: "images/pieces.jpg" },
       { ar: "أوراك مخلية سادة", en: "Boneless thighs", price: 185, unit: "kg", img: "images/boneless-thighs.jpg" },
       { ar: "دبابيس سادة", en: "Plain drumsticks", price: 120, unit: "kg", img: "images/plain-drumsticks.jpg" },
-      { ar: "شيش سادة", en: "Plain shish", price: 185, unit: "kg", img: "images/plain-shish.jpg" },
+      { ar: "شيش سادة", en: "Plain shish", price: 180, unit: "kg", img: "images/plain-shish.jpg" },
       { ar: "كبد", en: "Liver", price: 110, unit: "kg", img: "images/liver.jpg" },
       { ar: "كبد وقوانص", en: "Liver & gizzards", price: 100, unit: "kg", img: "images/liver-gizzards.jpg" },
       { ar: "رقبة", en: "Necks", price: 25, unit: "kg", img: "images/necks.jpg" },
