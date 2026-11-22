@@ -1,0 +1,265 @@
+/* =========================================================
+   Hero Chicken - concept.css (تصور بصري «أشيك» - غير منشور)
+   طبقة تنسيق فوق style.css: نفس الهوية (أخضر/دهبي)،
+   خط أوضح، مسافات أهدى، كروت أنضف.
+   ========================================================= */
+
+/* ---------- هوية لونية أرقى ---------- */
+:root {
+  --gold: #c9a227;
+  --gold-light: #e8c75a;
+  --gold-deep: #a8842a;
+  --green: #1a4d2e;
+  --green-dark: #0f3320;
+  --green-soft: #235c39;
+  --cream: #f7f3e7;
+  --line: #e7dcba;
+  --ink: #23281f;
+  --radius: 20px;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 50% -180px, #fdf9ec 0%, var(--cream) 55%) fixed,
+    var(--cream);
+  color: var(--ink);
+  letter-spacing: .1px;
+}
+
+/* ---------- الهيدر ---------- */
+.hero {
+  background:
+    radial-gradient(600px 260px at 85% -60px, rgba(232, 199, 90, .22), transparent 60%),
+    radial-gradient(500px 300px at 8% 110%, rgba(232, 199, 90, .10), transparent 55%),
+    linear-gradient(165deg, var(--green-dark) 0%, var(--green) 55%, var(--green-soft) 100%);
+  padding-bottom: 64px;
+}
+.hero::after {
+  background: linear-gradient(180deg, rgba(15, 51, 32, .15), rgba(15, 51, 32, .55));
+}
+
+.brand__logo {
+  border: 2px solid var(--gold-light);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .35), 0 0 0 4px rgba(232, 199, 90, .18);
+  border-radius: 22px;
+}
+
+.brand__name {
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+}
+.brand__name::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 3px;
+  margin-top: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--gold-light), var(--gold));
+}
+.brand__tag { font-weight: 600; letter-spacing: .3px; opacity: .95; }
+
+.status, .lang-btn {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, .35);
+}
+.status { background: rgba(255, 255, 255, .88); }
+.lang-btn { background: rgba(255, 255, 255, .14); color: #fff; border-radius: 999px; }
+
+.hero__tools .install-btn {
+  border-radius: 999px;
+  border-color: var(--gold-light);
+  background: rgba(255, 255, 255, .10);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  letter-spacing: .2px;
+}
+.hero__date, .hero__delivery { color: #f3e9c8; opacity: .92; }
+
+/* ---------- أزرار الأقسام ---------- */
+.chips { gap: 8px; padding-block: 10px; }
+.chips-wrap.is-stuck {
+  background: rgba(247, 243, 231, .9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 6px 16px rgba(20, 61, 36, .10);
+}
+.chip {
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(20, 61, 36, .06);
+  color: var(--green-dark);
+  font-weight: 700;
+}
+.chip.is-active {
+  background: linear-gradient(160deg, var(--green), var(--green-soft));
+  border-color: var(--gold);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(20, 61, 36, .30);
+}
+.chip.is-active .chip__icon { filter: none; }
+
+/* ---------- عناوين الأقسام ---------- */
+.cat-title {
+  border-bottom: 0;
+  position: relative;
+  padding-bottom: 0;
+  padding-inline-start: 16px;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: var(--green-dark);
+  margin-top: 30px;
+}
+.cat-title::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 5px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, var(--gold-light), var(--gold-deep));
+}
+
+/* ---------- كروت المنتجات ---------- */
+.grid { gap: 16px; }
+.card {
+  padding: 0;
+  overflow: hidden;
+  align-items: stretch;
+  gap: 0;
+  border-radius: var(--radius);
+  border: 1px solid rgba(231, 220, 186, .8);
+  box-shadow: 0 2px 6px rgba(20, 61, 36, .06), 0 10px 24px rgba(20, 61, 36, .07);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+@media (hover: hover) {
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(20, 61, 36, .10), 0 16px 32px rgba(20, 61, 36, .12); }
+}
+.card__img { border-radius: 0; }
+.card__name {
+  padding: 12px 12px 0;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+  justify-content: center;
+}
+.card__price {
+  margin-top: 6px;
+  align-self: center;
+  border-radius: 999px;
+  padding: 4px 16px;
+  background: linear-gradient(160deg, var(--gold-light), var(--gold));
+  box-shadow: 0 2px 8px rgba(201, 162, 39, .35);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(120, 90, 10, .35);
+}
+.card__price s { text-shadow: none; }
+.card__ctl { padding: 10px 12px 12px; }
+.add-btn {
+  border-radius: 12px;
+  border-width: 1.5px;
+  border-color: var(--green);
+  color: var(--green-dark);
+  font-weight: 800;
+  letter-spacing: .2px;
+  padding: 7px;
+}
+.qty { border-radius: 12px; }
+
+.badge { border-radius: 999px; box-shadow: 0 2px 6px rgba(0, 0, 0, .25); }
+
+/* ---------- البحث والعروض ---------- */
+.search input {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(20, 61, 36, .06);
+  padding: 12px 20px;
+}
+.search input:focus { border-color: var(--gold); box-shadow: 0 0 0 4px rgba(201, 162, 39, .15); }
+.banner__track { border-radius: var(--radius); box-shadow: 0 4px 16px rgba(20, 61, 36, .12); }
+.offers { border-radius: 16px; box-shadow: 0 2px 10px rgba(20, 61, 36, .06); }
+
+/* ---------- الشريط السفلي ---------- */
+.bottom-dock {
+  background: rgba(255, 253, 247, .82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(231, 220, 186, .9);
+}
+.bottom-dock .cart-bar { border-radius: 999px; border-width: 1.5px; }
+
+/* ---------- النوافذ ---------- */
+.panel { border-radius: 26px 26px 0 0; }
+.panel__title { letter-spacing: .2px; }
+.pill { border-radius: 999px; border-width: 1.5px; }
+.pill.is-on { background: linear-gradient(#fff, #fbf0c8); }
+.field { border-radius: 12px; }
+.send-btn { border-radius: 14px; box-shadow: 0 4px 14px rgba(37, 211, 102, .30); }
+.back-btn { border-radius: 14px; border-width: 1.5px; }
+
+/* ---------- الفوتر ---------- */
+.footer {
+  background:
+    radial-gradient(500px 220px at 90% -40px, rgba(232, 199, 90, .16), transparent 60%),
+    linear-gradient(165deg, var(--green-dark), var(--green) 70%);
+  border-radius: 32px 32px 0 0;
+}
+.footer__logo { border-radius: 18px; box-shadow: 0 4px 14px rgba(0, 0, 0, .3); }
+.footer__title { letter-spacing: .4px; }
+.footer__title::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  margin-top: 6px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold-light), var(--gold-deep));
+}
+.social__link { border-width: 1.5px; }
+.footer__copy { opacity: .8; }
+.footer__credit strong, .footer__credit a {
+  font-family: "Ruqaa", Cairo, Tahoma, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: .5px;
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+/* روابط الأقسام في الفوتر */
+.footer__cats { display: flex; flex-wrap: wrap; gap: 8px; }
+.footer__cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid rgba(232, 199, 90, .55);
+  border-radius: 999px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background .2s, color .2s;
+}
+.footer__cat:hover, .footer__cat:focus-visible { background: var(--gold-light); color: var(--green-dark); }
+@media (min-width: 700px) {
+  .footer__cols { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+/* ---------- موبايل ---------- */
+@media (max-width: 699px) {
+  .brand__name { letter-spacing: .8px; }
+  .grid { gap: 12px; }
+  .cat-title { margin-top: 24px; }
+}
+
+/* ---------- ديسكتوب: الهيدر بعرض الشاشة بهامش بسيط ---------- */
+@media (min-width: 1000px) {
+  .hero { padding-inline: 28px; }
+  .brand { margin-top: 14px; }
+}
