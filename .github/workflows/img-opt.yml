@@ -60,5 +60,5 @@ jobs:
             echo "no changes"
           else
             git commit -m "Generate optimized storefront images in images/opt (originals preserved)"
-            git push
+            git push origin HEAD:${GITHUB_REF_NAME}
           fi
