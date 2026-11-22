@@ -75,6 +75,11 @@ function renderFooter() {
   $("followTitle").textContent = t.followUs;
   $("contactTitle").textContent = t.contactUs;
 
+  // روابط الأقسام في الفوتر: نفس بيانات المنيو
+  $("catsTitle").textContent = t.sections;
+  $("footCats").innerHTML = CATEGORIES.map((cat, c) =>
+    `<a class="footer__cat" href="#cat-${c}">${cat.icon} ${cat[lang]}</a>`).join("");
+
   // السوشيال: الواتساب دايماً + اللي ليه رابط
   const links = [{ key: "whatsapp", label: "WhatsApp", url: `https://wa.me/${CONFIG.phone}` }]
     .concat(SOCIAL.filter((s) => s.url));

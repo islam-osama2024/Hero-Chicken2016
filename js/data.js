@@ -50,7 +50,7 @@ const CONFIG = {
   address: { ar: "موقع المحل على الخريطة", en: "Shop location on the map", mapUrl: "https://www.google.com/maps?q=30.462833,31.185417" },
 
   // القائم على المشروع (url اختياري: رابط صفحتك أو واتسابك)
-  developer: { ar: "أبو الياس", en: "Abu Elyas", url: "" }
+  developer: { ar: "أبو إلياس | Abu Elias", en: "أبو إلياس | Abu Elias", url: "" }
 };
 
 /* ---------- السوشيال ميديا ----------
@@ -308,6 +308,7 @@ const TEXT = {
     addToCart: "أضف للسلة",
     followUs: "تابعنا",
     contactUs: "تواصل معنا",
+    sections: "الأقسام",
     rights: "جميع الحقوق محفوظة",
     credit: "تصميم وتطوير",
     switchTo: "EN"
@@ -365,6 +366,7 @@ const TEXT = {
     addToCart: "Add to cart",
     followUs: "Follow us",
     contactUs: "Contact us",
+    sections: "Categories",
     rights: "All rights reserved",
     credit: "Designed & developed by",
     switchTo: "ع"
