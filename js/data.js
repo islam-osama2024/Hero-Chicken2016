@@ -116,14 +116,14 @@ const CATEGORIES = [
       { ar: "صدور بالعظم سادة", en: "Bone-in breasts", price: 150, unit: "kg", img: "images/breasts.jpg" },
       { ar: "بانية سادة", en: "Plain breast cutlets", price: 200, unit: "kg", img: "images/plain-breast-cutlets.jpg" },
       { ar: "استريبس سادة", en: "Plain strips", price: 210, unit: "kg", img: "images/plain-strips.jpg" },
-      { ar: "شاورما سادة", en: "Plain shawarma", price: 200, unit: "kg", img: "images/plain-shawarma.jpg" },
+      { ar: "شاورما سادة", en: "Plain shawarma", price: 190, unit: "kg", img: "images/plain-shawarma.jpg" },
       { ar: "أجنحة سادة", en: "Plain wings", price: 70, unit: "kg", img: "images/plain-wings.jpg" },
       { ar: "أوراك بالعضم سادة", en: "Bone-in thighs", price: 80, unit: "kg", img: "images/pieces.jpg" },
       { ar: "أوراك مخلية سادة", en: "Boneless thighs", price: 185, unit: "kg", img: "images/boneless-thighs.jpg" },
       { ar: "دبابيس سادة", en: "Plain drumsticks", price: 120, unit: "kg", img: "images/plain-drumsticks.jpg" },
       { ar: "شيش سادة", en: "Plain shish", price: 180, unit: "kg", img: "images/plain-shish.jpg" },
       { ar: "كبد", en: "Liver", price: 110, unit: "kg", img: "images/liver.jpg" },
-      { ar: "كبد وقوانص", en: "Liver & gizzards", price: 100, unit: "kg", img: "images/liver-gizzards.jpg" },
+      { ar: "كبد وقوانص", en: "Liver & gizzards", price: 90, unit: "kg", img: "images/liver-gizzards.jpg" },
       { ar: "رقبة", en: "Necks", price: 25, unit: "kg", img: "images/necks.jpg" },
       { ar: "هياكل", en: "Carcasses", price: 35, unit: "kg", img: "images/carcasses.jpg" },
       { ar: "أرجل دجاج", en: "Chicken feet", price: 25, unit: "kg", img: "images/chicken-feet.webp" }
@@ -220,7 +220,7 @@ const CATEGORIES = [
   {
     ar: "خبز", en: "Bread", icon: "🥖",
     items: [
-      { ar: "عيش سوري", en: "Syrian bread", price: 35, unit: "bag", img: "images/syrian-bread.jpg" },  // ⚠ سعر تقديري
+      { ar: "عيش سوري", en: "Syrian bread", price: 40, unit: "bag", img: "images/syrian-bread.jpg" },  // ⚠ سعر تقديري
       { ar: "عيش كيذر", en: "Kaiser bread", price: 60, unit: "bag", img: "images/kaiser-bread.jpg" },  // ⚠ سعر تقديري
       { ar: "عيش فرنساوي", en: "French bread", price: 30, unit: "bag", img: "images/french-bread.jpg" }  // ⚠ سعر تقديري
     ]
