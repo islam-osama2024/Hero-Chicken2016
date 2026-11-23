@@ -78,7 +78,7 @@ function renderFooter() {
   // روابط الأقسام في الفوتر: نفس بيانات المنيو
   $("catsTitle").textContent = t.sections;
   $("footCats").innerHTML = CATEGORIES.map((cat, c) =>
-    `<a class="footer__cat" href="#cat-${c}">${cat.icon} ${cat[lang]}</a>`).join("");
+    `<a class="footer__cat" href="#cat-${c}">${catIcon(cat, "footer__cat-icon")} ${cat[lang]}</a>`).join("");
 
   // السوشيال: الواتساب دايماً + اللي ليه رابط
   const links = [{ key: "whatsapp", label: "WhatsApp", url: `https://wa.me/${CONFIG.phone}` }]
@@ -107,10 +107,15 @@ function renderFooter() {
     : `<strong>${dev[lang]}</strong>`);
 }
 
+// أيقونة القسم: صورة طبيعية لو متوفرة، والإيموجي احتياطي لو الصورة ما اتحملتش
+const catIcon = (cat, cls) => cat.img
+  ? `<img class="${cls}" src="${cat.img.replace("images/", "images/opt/")}" alt="" loading="lazy" data-fb="${cat.icon}" data-o="${cat.img}" onerror="if(!this.dataset.r){this.dataset.r=1;this.src=this.dataset.o}else{this.outerHTML=this.dataset.fb}">`
+  : (cls === "chip__icon" ? `<span class="chip__icon">${cat.icon}</span>` : cat.icon);
+
 function renderMenu() {
   $("chips").innerHTML = CATEGORIES.map((cat, c) =>
     `<button class="chip" type="button" data-action="chip" data-c="${c}">
-       <span class="chip__icon">${cat.icon}</span>${cat[lang]}
+       ${catIcon(cat, "chip__icon")}${cat[lang]}
      </button>`).join("");
 
   $("menu").innerHTML = CATEGORIES.map((cat, c) =>
