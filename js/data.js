@@ -97,7 +97,7 @@ const QUICK = { kg: [0.5, 1, 2, 3, 5], pc: [1, 2, 3, 4] };
 */
 const CATEGORIES = [
   {
-    ar: "حي فريش", en: "Live & fresh", icon: "🐔",
+    ar: "حي فريش", en: "Live & fresh", img: "images/whole.jpg", icon: "🐔",
     items: [
       { ar: "فراخ أبيض", en: "White chicken", price: 75, unit: "kg", img: "images/whole.jpg", opts: ["cut"] },
       { ar: "فراخ ساسو", en: "Sasso chicken", price: 130, unit: "kg", img: "images/sasso-chicken.jpg", opts: ["cut"] },
@@ -111,7 +111,7 @@ const CATEGORIES = [
     ]
   },
   {
-    ar: "قطعيات أبيض سادة", en: "Plain white cuts", icon: "🍗",
+    ar: "قطعيات أبيض سادة", en: "Plain white cuts", img: "images/breasts.jpg", icon: "🍗",
     items: [
       { ar: "صدور بالعظم سادة", en: "Bone-in breasts", price: 150, unit: "kg", img: "images/breasts.jpg" },
       { ar: "بانية سادة", en: "Plain breast cutlets", price: 200, unit: "kg", img: "images/plain-breast-cutlets.jpg" },
@@ -130,7 +130,7 @@ const CATEGORIES = [
     ]
   },
   {
-    ar: "مفروم", en: "Minced & processed", icon: "🌭",
+    ar: "مفروم", en: "Minced & processed", img: "images/natural-chicken-sausage.jpg", icon: "🌭",
     note: { ar: "لحم دجاج صافي بدون جلد", en: "Pure skinless chicken meat" },
     items: [
       { ar: "برجر فراخ سادة", en: "Plain chicken burger", price: 299, unit: "kg", img: "images/natural-chicken-burger.jpg" },
@@ -143,7 +143,7 @@ const CATEGORIES = [
     ]
   },
   {
-    ar: "بروست", en: "Broasted", icon: "🍟",
+    ar: "بروست", en: "Broasted", img: "images/broasted-mix.jpg", icon: "🍟",
     items: [
       { ar: "دبابيس بروست", en: "Broasted drumsticks", price: 250, unit: "kg", img: "images/broasted-drumsticks.jpg" },
       { ar: "صدور بالعظم بروست", en: "Broasted bone-in breasts", price: 240, unit: "kg", img: "images/broasted-bone-in-breasts.jpg" },
@@ -157,7 +157,7 @@ const CATEGORIES = [
     ]
   },
   {
-    ar: "تتبيلة حاتي تركي", en: "Turkish marinade", icon: "🥙",
+    ar: "تتبيلة حاتي تركي", en: "Turkish marinade", img: "images/turkish-marinated-shish.jpg", icon: "🥙",
     items: [
       { ar: "فرخة كاملة متبلة تركي", en: "Turkish marinated whole chicken", price: 230, unit: "kg", img: "images/turkish-marinated-whole-chicken.jpg", opts: ["cut"] },
       { ar: "أوراك بالعظم متبلة تركي", en: "Turkish marinated bone-in thighs", price: 230, unit: "kg", img: "images/turkish-marinated-bone-in-thighs.jpg" },
@@ -169,7 +169,7 @@ const CATEGORIES = [
     ]
   },
   {
-    ar: "تتبيلة مكسيكي", en: "Mexican marinade", icon: "🌶️",
+    ar: "تتبيلة مكسيكي", en: "Mexican marinade", img: "images/mexican-marinated-wings.jpg", icon: "🌶️",
     items: [
            { ar: "فرخة كاملة متبلة مكسيكي", en: "Mexican marinated whole chicken", price: 230, unit: "kg", img: "images/mexican-marinated-whole-chicken.webp", opts: ["cut"] },
       { ar: "أجنحة متبلة مكسيكي", en: "Mexican marinated wings", price: 170, unit: "kg", img: "images/mexican-marinated-wings.jpg" },
@@ -178,7 +178,7 @@ const CATEGORIES = [
     ]
   },
   {
-    ar: "تتبيلة يوناني أعشاب", en: "Greek herb marinade", icon: "🌿",
+    ar: "تتبيلة يوناني أعشاب", en: "Greek herb marinade", img: "images/greek-marinated-shish.jpg", icon: "🌿",
     items: [
             { ar: "فرخة كاملة متبلة يوناني", en: "Greek marinated whole chicken", price: 230, unit: "kg", img: "images/greek-marinated-whole-chicken.webp", opts: ["cut"] },
       { ar: "دبابيس متبلة يوناني", en: "Greek marinated drumsticks", price: 250, unit: "kg", img: "images/greek-marinated-drumsticks.jpg" },
@@ -187,7 +187,7 @@ const CATEGORIES = [
     ]
   },
   {
-    ar: "تتبيلة سويت اند سور", en: "Sweet & sour marinade", icon: "🍯",
+    ar: "تتبيلة سويت اند سور", en: "Sweet & sour marinade", img: "images/sweet-sour-wings.jpg", icon: "🍯",
     items: [
       { ar: "أجنحة سويت اند سور", en: "Sweet & sour wings", price: 170, unit: "kg", img: "images/sweet-sour-wings.jpg" },
       { ar: "دبابيس سويت اند سور", en: "Sweet & sour drumsticks", price: 250, unit: "kg", img: "images/sweet-sour-drumsticks.jpg" },
@@ -195,7 +195,7 @@ const CATEGORIES = [
     ]
   },
   {
-    ar: "بيض", en: "Eggs", icon: "🥚",
+    ar: "بيض", en: "Eggs", img: "images/baladi-eggs.jpg", icon: "🥚",
     items: [
       { ar: "بيض بلدي", en: "Baladi eggs", price: 165, unit: "tray", img: "images/baladi-eggs.jpg" },
       { ar: "بيض أبيض", en: "White eggs", price: 140, unit: "tray", img: "images/white-eggs.jpg" },
@@ -206,19 +206,18 @@ const CATEGORIES = [
     ]
   },
   {
-    ar: "تيستي اند هيلثي", en: "Tasty & Healthy", icon: "🥫",
+    ar: "صوصات", en: "Sauces", img: "images/natural-garlic-sauce.jpg", icon: "🥫",
     items: [
       { ar: "كاتشب طبيعي", en: "Natural ketchup", price: 45, unit: "box", img: "images/natural-ketchup.jpg" },
       { ar: "ثومية طبيعي", en: "Natural garlic sauce", price: 55, unit: "box", img: "images/natural-garlic-sauce.jpg" },  // ⚠ سعر تقديري
       { ar: "مايونيز طبيعي", en: "Natural mayonnaise", price: 55, unit: "box", img: "images/natural-mayonnaise.jpg" },
       { ar: "صوص باربكيو طبيعي", en: "Natural BBQ sauce", price: 75, unit: "box", img: "images/natural-bbq-sauce.jpg" },
       { ar: "صوص جبنة طبيعي", en: "Natural cheese sauce", price: 75, unit: "box", img: "images/natural-cheese-sauce.jpg" },
-      { ar: "صوص رانش طبيعي", en: "Natural ranch sauce", price: 75, unit: "box", img: "images/natural-ranch-sauce.jpg" },
-      { ar: "كول سلو طبيعي", en: "Natural coleslaw", price: 65, unit: "box", img: "images/natural-coleslaw.jpg" }  // ⚠ سعر تقديري
+      { ar: "صوص رانش طبيعي", en: "Natural ranch sauce", price: 75, unit: "box", img: "images/natural-ranch-sauce.jpg" }
     ]
   },
   {
-    ar: "خبز", en: "Bread", icon: "🥖",
+    ar: "خبز", en: "Bread", img: "images/syrian-bread.jpg", icon: "🥖",
     items: [
       { ar: "عيش سوري", en: "Syrian bread", price: 40, unit: "bag", img: "images/syrian-bread.jpg" },  // ⚠ سعر تقديري
       { ar: "عيش كيذر", en: "Kaiser bread", price: 60, unit: "bag", img: "images/kaiser-bread.jpg" },  // ⚠ سعر تقديري
@@ -226,21 +225,21 @@ const CATEGORIES = [
     ]
   },
   {
-    ar: "شواية بيتي", en: "Home grills", icon: "🔥",
+    ar: "شواية بيتي", en: "Home grills", img: "images/home-grill-small.jpg", icon: "🔥",
     items: [
       { ar: "شواية بيتي صغيرة", en: "Home grill (small)", price: 300, unit: "unit", img: "images/home-grill-small.jpg" },
       { ar: "شواية بيتي كبيرة", en: "Home grill (large)", price: 450, unit: "unit", img: "images/home-grill-large.jpg" }
     ]
   },
   {
-    ar: "أرز", en: "Rice", icon: "🍚",
+    ar: "أرز", en: "Rice", img: "images/basmati-rice.jpg", icon: "🍚",
     items: [
       { ar: "أرز بسمتي", en: "Basmati rice", price: 95, unit: "kg", img: "images/basmati-rice.jpg" },
       { ar: "أرز مصري", en: "Egyptian rice", price: 28, unit: "kg", img: "images/egyptian-rice.jpg" }
     ]
   },
   {
-    ar: "بقالة", en: "Grocery", icon: "🛒",
+    ar: "بقالة", en: "Grocery", img: "images/frozen-potatoes.jpg", icon: "🛒",
     items: [
       { ar: "بطاطس مجمدة", en: "Frozen potatoes", price: 120, unit: "kg", img: "images/frozen-potatoes.jpg" },
       { ar: "ماشروم طازج", en: "Fresh mushrooms", price: 60, unit: "tray", img: "images/fresh-mushrooms.jpg" },  // ⚠ سعر تقديري
