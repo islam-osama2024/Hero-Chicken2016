@@ -550,3 +550,8 @@ body.has-cart .fab__label { display: none; }
 .pill .pay-logo { display: inline-flex; align-items: center; height: 18px; margin-inline-end: 6px; vertical-align: middle; }
 .pill .pay-logo svg { height: 18px; width: auto; display: block; }
 .pill img.pay-logo { height: 18px; width: auto; display: inline-block; border-radius: 4px; vertical-align: middle; margin-inline-end: 6px; }
+
+
+/* صور الأقسام الطبيعية بدل الإيموجي */
+img.chip__icon { width: 46px; height: 46px; object-fit: cover; border-radius: 10px; margin: 0 auto 4px; }
+.footer__cat-icon { width: 20px; height: 20px; object-fit: cover; border-radius: 50%; vertical-align: -4px; }
