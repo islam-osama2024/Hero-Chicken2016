@@ -114,13 +114,14 @@ const CATEGORIES = [
     ar: "قطعيات أبيض سادة", en: "Plain white cuts", img: "images/breasts.jpg", icon: "🍗",
     items: [
       { ar: "صدور بالعظم سادة", en: "Bone-in breasts", price: 150, unit: "kg", img: "images/breasts.jpg" },
+      { ar: "صدور فص من غير عظم", en: "Boneless breast fillet", price: 190, unit: "kg", img: "images/breasts.jpg" },
       { ar: "بانية سادة", en: "Plain breast cutlets", price: 200, unit: "kg", img: "images/plain-breast-cutlets.jpg" },
       { ar: "استريبس سادة", en: "Plain strips", price: 210, unit: "kg", img: "images/plain-strips.jpg" },
       { ar: "شاورما سادة", en: "Plain shawarma", price: 190, unit: "kg", img: "images/plain-shawarma.jpg" },
       { ar: "أجنحة سادة", en: "Plain wings", price: 70, unit: "kg", img: "images/plain-wings.jpg" },
       { ar: "أوراك بالعضم سادة", en: "Bone-in thighs", price: 80, unit: "kg", img: "images/pieces.jpg" },
       { ar: "أوراك مخلية سادة", en: "Boneless thighs", price: 185, unit: "kg", img: "images/boneless-thighs.jpg" },
-      { ar: "دبابيس سادة", en: "Plain drumsticks", price: 120, unit: "kg", img: "images/plain-drumsticks.jpg" },
+      { ar: "دبابيس سادة", en: "Plain drumsticks", price: 125, unit: "kg", img: "images/plain-drumsticks.jpg" },
       { ar: "شيش سادة", en: "Plain shish", price: 180, unit: "kg", img: "images/plain-shish.jpg" },
       { ar: "كبد", en: "Liver", price: 110, unit: "kg", img: "images/liver.jpg" },
       { ar: "كبد وقوانص", en: "Liver & gizzards", price: 90, unit: "kg", img: "images/liver-gizzards.jpg" },
@@ -159,7 +160,7 @@ const CATEGORIES = [
   {
     ar: "تتبيلة حاتي تركي", en: "Turkish marinade", img: "images/turkish-marinated-shish.jpg", icon: "🥙",
     items: [
-      { ar: "فرخة كاملة متبلة تركي", en: "Turkish marinated whole chicken", price: 230, unit: "kg", img: "images/turkish-marinated-whole-chicken.jpg", opts: ["cut"] },
+      { ar: "فرخة كاملة متبلة تركي", en: "Turkish marinated whole chicken", price: 190, unit: "kg", img: "images/turkish-marinated-whole-chicken.jpg", opts: ["cut"] },
       { ar: "أوراك بالعظم متبلة تركي", en: "Turkish marinated bone-in thighs", price: 230, unit: "kg", img: "images/turkish-marinated-bone-in-thighs.jpg" },
       { ar: "شيش طاوق تركي", en: "Turkish tawook shish", price: 295, unit: "kg", img: "images/turkish-marinated-shish.jpg" },
       { ar: "سيخ شاورما تركي", en: "Turkish shawarma skewer", price: 330, unit: "kg", img: "images/turkish-shawarma-skewer.jpg" },
@@ -171,7 +172,7 @@ const CATEGORIES = [
   {
     ar: "تتبيلة مكسيكي", en: "Mexican marinade", img: "images/mexican-marinated-wings.jpg", icon: "🌶️",
     items: [
-           { ar: "فرخة كاملة متبلة مكسيكي", en: "Mexican marinated whole chicken", price: 230, unit: "kg", img: "images/mexican-marinated-whole-chicken.webp", opts: ["cut"] },
+           { ar: "فرخة كاملة متبلة مكسيكي", en: "Mexican marinated whole chicken", price: 190, unit: "kg", img: "images/mexican-marinated-whole-chicken.webp", opts: ["cut"] },
       { ar: "أجنحة متبلة مكسيكي", en: "Mexican marinated wings", price: 170, unit: "kg", img: "images/mexican-marinated-wings.jpg" },
       { ar: "دبابيس متبلة مكسيكي", en: "Mexican marinated drumsticks", price: 250, unit: "kg", img: "images/mexican-marinated-drumsticks.jpg" },
       { ar: "صدور متبلة مكسيكي", en: "Mexican marinated breasts", price: 330, unit: "kg", img: "images/mexican-marinated-breasts.jpg" }
@@ -180,7 +181,7 @@ const CATEGORIES = [
   {
     ar: "تتبيلة يوناني أعشاب", en: "Greek herb marinade", img: "images/greek-marinated-shish.jpg", icon: "🌿",
     items: [
-            { ar: "فرخة كاملة متبلة يوناني", en: "Greek marinated whole chicken", price: 230, unit: "kg", img: "images/greek-marinated-whole-chicken.webp", opts: ["cut"] },
+            { ar: "فرخة كاملة متبلة يوناني", en: "Greek marinated whole chicken", price: 190, unit: "kg", img: "images/greek-marinated-whole-chicken.webp", opts: ["cut"] },
       { ar: "دبابيس متبلة يوناني", en: "Greek marinated drumsticks", price: 250, unit: "kg", img: "images/greek-marinated-drumsticks.jpg" },
       { ar: "صدور متبلة يوناني", en: "Greek marinated breasts", price: 330, unit: "kg", img: "images/greek-marinated-breasts.jpg" },
       { ar: "شيش متبلة يوناني", en: "Greek marinated shish", price: 330, unit: "kg", img: "images/greek-marinated-shish.jpg" }
@@ -373,3 +374,4 @@ const TEXT = {
     switchTo: "ع"
   }
 };
+
