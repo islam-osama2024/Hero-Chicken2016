@@ -124,7 +124,7 @@ const CATEGORIES = [
       { ar: "أوراك مخلية سادة", en: "Boneless thighs", price: 185, unit: "kg", img: "images/boneless-thighs.jpg" },
       { ar: "دبابيس سادة", en: "Plain drumsticks", price: 125, unit: "kg", img: "images/plain-drumsticks.jpg" },
       { ar: "شيش سادة", en: "Plain shish", price: 180, unit: "kg", img: "images/plain-shish.jpg" },
-      { ar: "كبد", en: "Liver", price: 110, unit: "kg", img: "images/liver.jpg" },
+      { ar: "كبد", en: "Liver", price: 100, unit: "kg", img: "images/liver.jpg" },
       { ar: "كبد وقوانص", en: "Liver & gizzards", price: 90, unit: "kg", img: "images/liver-gizzards.jpg" },
       { ar: "رقبة", en: "Necks", price: 25, unit: "kg", img: "images/necks.jpg" },
       { ar: "هياكل", en: "Carcasses", price: 35, unit: "kg", img: "images/carcasses.jpg" },
@@ -137,23 +137,23 @@ const CATEGORIES = [
     items: [
       { ar: "برجر فراخ سادة", en: "Plain chicken burger", price: 299, unit: "kg", img: "images/natural-chicken-burger.jpg" },
       { ar: "لانشون فراخ مدخن", en: "Smoked chicken luncheon", price: 300, unit: "kg", img: "images/natural-chicken-luncheon.jpg" },
-      { ar: "سوسيس فراخ سادة", en: "Plain chicken sausage", price: 295, unit: "kg", img: "images/natural-chicken-sausage.jpg" },
+      { ar: "سوسيس فراخ سادة", en: "Plain chicken sausage", price: 300, unit: "kg", img: "images/natural-chicken-sausage.jpg" },
       { ar: "كفتة فراخ سادة", en: "Plain chicken kofta", price: 299, unit: "kg", img: "images/natural-chicken-kofta.jpg" },
-      { ar: "مسحب فراخ سادة", en: "Plain pulled chicken", price: 299, unit: "kg", img: "images/natural-pulled-chicken.jpg" },
-      { ar: "برجر فراخ بحشو الجبنة", en: "Cheese-stuffed chicken burger", price: 330, unit: "kg", img: "images/cheese-stuffed-chicken-burger.jpg" },
-      { ar: "صدور مدخنة", en: "Smoked chicken breasts", price: 330, unit: "kg", img: "images/smoked-chicken-breasts.webp" }
+      { ar: "مسحب فراخ سادة", en: "Plain pulled chicken", price: 330, unit: "kg", img: "images/natural-pulled-chicken.jpg" },
+      { ar: "برجر فراخ بحشو الجبنة", en: "Cheese-stuffed chicken burger", price: 310, unit: "kg", img: "images/cheese-stuffed-chicken-burger.jpg" },
+      { ar: "صدور مدخنة", en: "Smoked chicken breasts", price: 310, unit: "kg", img: "images/smoked-chicken-breasts.webp" }
     ]
   },
   {
     ar: "بروست", en: "Broasted", img: "images/broasted-mix.jpg", icon: "🍟",
     items: [
-      { ar: "دبابيس بروست", en: "Broasted drumsticks", price: 250, unit: "kg", img: "images/broasted-drumsticks.jpg" },
-      { ar: "صدور بالعظم بروست", en: "Broasted bone-in breasts", price: 240, unit: "kg", img: "images/broasted-bone-in-breasts.jpg" },
+      { ar: "دبابيس بروست", en: "Broasted drumsticks", price: 220, unit: "kg", img: "images/broasted-drumsticks.jpg" },
+      { ar: "صدور بالعظم بروست", en: "Broasted bone-in breasts", price: 299, unit: "kg", img: "images/broasted-bone-in-breasts.jpg" },
       { ar: "بانية بروست", en: "Broasted cutlets", price: 299, unit: "kg", img: "images/broasted-cutlets.jpg" },
       { ar: "أجنحة بروست", en: "Broasted wings", price: 150, unit: "kg", img: "images/broasted-wings.jpg" },
       { ar: "صوابع جبنة موزاريلا", en: "Mozzarella cheese sticks", price: 270, unit: "kg", img: "images/mozzarella-sticks.jpg" },
-      { ar: "كوردن بلو فرنسي شوي", en: "French cordon bleu cordon (grilled)", price: 350, unit: "kg", img: "images/chicken-roll.jpg" },
-      { ar: "كوردن بلو فرنسي قلي", en: "French cordon bleu (fried)", price: 370, unit: "kg", img: "images/cordon-bleu.jpg" },
+      { ar: "كوردن بلو فرنسي شوي", en: "French cordon bleu cordon (grilled)", price: 360, unit: "kg", img: "images/chicken-roll.jpg" },
+      { ar: "كوردن بلو فرنسي قلي", en: "French cordon bleu (fried)", price: 360, unit: "kg", img: "images/cordon-bleu.jpg" },
       { ar: "زنجر سبايسي", en: "Zinger (fried)", price:300, unit: "kg", img: "images/spicy-zinger.jpg" },
       { ar: "بروست قطع متنوعة", en: "brost (fried)", price:250, unit: "kg", img: "images/broasted-mix.jpg" }
     ]
@@ -161,8 +161,8 @@ const CATEGORIES = [
   {
     ar: "تتبيلة حاتي تركي", en: "Turkish marinade", img: "images/turkish-marinated-shish.jpg", icon: "🥙",
     items: [
-      { ar: "فرخة كاملة متبلة تركي", en: "Turkish marinated whole chicken", price: 195, unit: "kg", img: "images/turkish-marinated-whole-chicken.jpg", opts: ["cut"] },
-      { ar: "أوراك بالعظم متبلة تركي", en: "Turkish marinated bone-in thighs", price: 230, unit: "kg", img: "images/turkish-marinated-bone-in-thighs.jpg" },
+      { ar: "فرخة كاملة متبلة تركي", en: "Turkish marinated whole chicken", price: 220, unit: "kg", img: "images/turkish-marinated-whole-chicken.jpg", opts: ["cut"] },
+      { ar: "أوراك بالعظم متبلة تركي", en: "Turkish marinated bone-in thighs", price: 195, unit: "kg", img: "images/turkish-marinated-bone-in-thighs.jpg" },
       { ar: "شيش طاوق تركي", en: "Turkish tawook shish", price: 295, unit: "kg", img: "images/turkish-marinated-shish.jpg" },
       { ar: "سيخ شاورما تركي", en: "Turkish shawarma skewer", price: 330, unit: "kg", img: "images/turkish-shawarma-skewer.jpg" },
       { ar: "شاورما شرائح تركي", en: "Turkish shawarma slices", price: 299, unit: "kg", img: "images/turkish-shawarma-slices.jpg" },
@@ -173,7 +173,7 @@ const CATEGORIES = [
   {
     ar: "تتبيلة مكسيكي", en: "Mexican marinade", img: "images/mexican-marinated-wings.jpg", icon: "🌶️",
     items: [
-           { ar: "فرخة كاملة متبلة مكسيكي", en: "Mexican marinated whole chicken", price: 195, unit: "kg", img: "images/mexican-marinated-whole-chicken.webp", opts: ["cut"] },
+           { ar: "فرخة كاملة متبلة مكسيكي", en: "Mexican marinated whole chicken", price: 220, unit: "kg", img: "images/mexican-marinated-whole-chicken.webp", opts: ["cut"] },
       { ar: "أجنحة متبلة مكسيكي", en: "Mexican marinated wings", price: 170, unit: "kg", img: "images/mexican-marinated-wings.jpg" },
       { ar: "دبابيس متبلة مكسيكي", en: "Mexican marinated drumsticks", price: 250, unit: "kg", img: "images/mexican-marinated-drumsticks.jpg" },
       { ar: "صدور متبلة مكسيكي", en: "Mexican marinated breasts", price: 330, unit: "kg", img: "images/mexican-marinated-breasts.jpg" }
@@ -182,10 +182,10 @@ const CATEGORIES = [
   {
     ar: "تتبيلة يوناني أعشاب", en: "Greek herb marinade", img: "images/greek-marinated-shish.jpg", icon: "🌿",
     items: [
-            { ar: "فرخة كاملة متبلة يوناني", en: "Greek marinated whole chicken", price: 195, unit: "kg", img: "images/greek-marinated-whole-chicken.webp", opts: ["cut"] },
+            { ar: "فرخة كاملة متبلة يوناني", en: "Greek marinated whole chicken", price: 230, unit: "kg", img: "images/greek-marinated-whole-chicken.webp", opts: ["cut"] },
       { ar: "دبابيس متبلة يوناني", en: "Greek marinated drumsticks", price: 250, unit: "kg", img: "images/greek-marinated-drumsticks.jpg" },
       { ar: "صدور متبلة يوناني", en: "Greek marinated breasts", price: 330, unit: "kg", img: "images/greek-marinated-breasts.jpg" },
-      { ar: "شيش متبلة يوناني", en: "Greek marinated shish", price: 330, unit: "kg", img: "images/greek-marinated-shish.jpg" }
+      { ar: "شيش متبلة يوناني", en: "Greek marinated shish", price: 295, unit: "kg", img: "images/greek-marinated-shish.jpg" }
     ]
   },
   {
@@ -202,7 +202,7 @@ const CATEGORIES = [
       { ar: "بيض بلدي", en: "Baladi eggs", price: 165, unit: "tray", img: "images/baladi-eggs.jpg" },
       { ar: "بيض أبيض", en: "White eggs", price: 140, unit: "tray", img: "images/white-eggs.jpg" },
       { ar: "بيض أحمر", en: "Brown eggs", price: 155, unit: "tray", img: "images/brown-eggs.jpg" },
-      { ar: "بيض مميز", en: "Premium eggs", price: 160, unit: "tray", img: "images/premium-eggs.jpg" },
+      { ar: "بيض مميز", en: "Premium eggs", price: 130, unit: "tray", img: "images/premium-eggs.jpg" },
       { ar: "بيض نباتي", en: "Vegetarian eggs", price: 170, unit: "tray", img: "images/vegetarian-eggs.jpg" },  // ⚠ سعر تقديري
       { ar: "بيض سمان", en: "Quail eggs", price: 95, unit: "tray", img: "images/quail-eggs.jpg" }  // ⚠ سعر تقديري
     ]
