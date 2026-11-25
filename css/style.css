@@ -448,6 +448,8 @@ body.has-cart .fab-wrap { bottom: calc(86px + env(safe-area-inset-bottom, 0px));
   font-size: 16px; font-weight: 800; color: var(--gold-light);
   margin-bottom: 10px;
 }
+.footer__map { margin-top: 24px; }
+.footer__mapframe { width: 100%; height: 240px; display: block; border: 0; border-radius: 14px; border: 2px solid var(--gold-light); }
 
 .social { display: flex; flex-wrap: wrap; gap: 10px; }
 .social__link {
