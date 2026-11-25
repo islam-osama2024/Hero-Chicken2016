@@ -151,7 +151,6 @@ const CATEGORIES = [
       { ar: "دبابيس بروست", en: "Broasted drumsticks", price: 220, unit: "kg", img: "images/broasted-drumsticks.jpg" },
       { ar: "صدور بالعظم بروست", en: "Broasted bone-in breasts", price: 299, unit: "kg", img: "images/broasted-bone-in-breasts.jpg" },
       { ar: "بانية بروست", en: "Broasted cutlets", price: 299, unit: "kg", img: "images/broasted-cutlets.jpg" },
-      { ar: "أجنحة بروست", en: "Broasted wings", price: 150, unit: "kg", img: "images/broasted-wings.jpg" },
       { ar: "صوابع جبنة موزاريلا", en: "Mozzarella cheese sticks", price: 270, unit: "kg", img: "images/mozzarella-sticks.jpg" },
       { ar: "كوردن بلو فرنسي شوي", en: "French cordon bleu cordon (grilled)", price: 360, unit: "kg", img: "images/chicken-roll.jpg" },
       { ar: "كوردن بلو فرنسي قلي", en: "French cordon bleu (fried)", price: 360, unit: "kg", img: "images/cordon-bleu.jpg" },
