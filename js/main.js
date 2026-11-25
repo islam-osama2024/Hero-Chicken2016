@@ -74,6 +74,7 @@ function renderFooter() {
   $("footTag").textContent = t.tagline;
   $("followTitle").textContent = t.followUs;
   $("contactTitle").textContent = t.contactUs;
+  $("mapTitle").textContent = t.ourLocation;
 
   // روابط الأقسام في الفوتر: نفس بيانات المنيو
   $("catsTitle").textContent = t.sections;
