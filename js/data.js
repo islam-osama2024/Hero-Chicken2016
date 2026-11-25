@@ -47,7 +47,7 @@ const CONFIG = {
   phones: ["01277666761", "01029666494"],
 
   // العنوان (اختياري): سيبه فاضي لو مش عايزه يظهر. mapUrl رابط الموقع على خرائط جوجل
-  address: { ar: "موقع المحل على الخريطة", en: "Shop location on the map", mapUrl: "https://www.google.com/maps?q=30.462833,31.185417" },
+  address: { ar: "موقع المحل على الخريطة", en: "Shop location on the map", mapUrl: "https://maps.app.goo.gl/hv79pMepUFrHLtyY8" },
 
   // القائم على المشروع (url اختياري: رابط صفحتك أو واتسابك)
   developer: { ar: "أبو إلياس | Abu Elias", en: "أبو إلياس | Abu Elias", url: "" }
@@ -309,6 +309,7 @@ const TEXT = {
     addToCart: "أضف للسلة",
     followUs: "تابعنا",
     contactUs: "تواصل معنا",
+    ourLocation: "موقعنا على الخريطة",
     sections: "الأقسام",
     rights: "جميع الحقوق محفوظة",
     credit: "تصميم وتطوير",
@@ -368,6 +369,7 @@ const TEXT = {
     addToCart: "Add to cart",
     followUs: "Follow us",
     contactUs: "Contact us",
+    ourLocation: "Our location on the map",
     sections: "Categories",
     rights: "All rights reserved",
     credit: "Designed & developed by",
