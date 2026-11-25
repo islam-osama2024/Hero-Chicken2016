@@ -114,7 +114,7 @@ const CATEGORIES = [
     ar: "قطعيات أبيض سادة", en: "Plain white cuts", img: "images/breasts.jpg", icon: "🍗",
     items: [
       { ar: "صدور بالعظم سادة", en: "Bone-in breasts", price: 150, unit: "kg", img: "images/breasts.jpg" },
-      { ar: "صدور فص من غير عظم", en: "Boneless breast fillet", price: 190, unit: "kg", img: "images/plain-breast-cutlets.jpg" },
+      { ar: "صدور فص من غير عظم", en: "Boneless breast fillet", price: 190, unit: "kg", img: "images/boneless-breast.jpg" },
       { ar: "بانية سادة", en: "Plain breast cutlets", price: 200, unit: "kg", img: "images/plain-breast-cutlets.jpg" },
       { ar: "استريبس سادة", en: "Plain strips", price: 210, unit: "kg", img: "images/plain-strips.jpg" },
       { ar: "شاورما سادة", en: "Plain shawarma", price: 190, unit: "kg", img: "images/plain-shawarma.jpg" },
@@ -374,5 +374,6 @@ const TEXT = {
     switchTo: "ع"
   }
 };
+
 
 
