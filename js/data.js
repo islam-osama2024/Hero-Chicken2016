@@ -99,7 +99,7 @@ const CATEGORIES = [
   {
     ar: "حي فريش", en: "Live & fresh", img: "images/whole.jpg", icon: "🐔",
     items: [
-      { ar: "فراخ أبيض", en: "White chicken", price: 72, unit: "kg", img: "images/whole.jpg", opts: ["cut"] },
+      { ar: "فراخ أبيض", en: "White chicken", price: 77, unit: "kg", img: "images/whole.jpg", opts: ["cut"] },
       { ar: "فراخ ساسو", en: "Sasso chicken", price: 130, unit: "kg", img: "images/sasso-chicken.jpg", opts: ["cut"] },
       { ar: "فراخ بلدي", en: "Baladi chicken", price: 140, unit: "kg", img: "images/grilled.jpg", opts: ["cut"] },
       { ar: "فراخ عتاقي", en: "Ataqi chicken", price: 100, unit: "kg", img: "images/ataqi-chicken.jpg", opts: ["cut"] },
