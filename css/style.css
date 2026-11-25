@@ -545,7 +545,7 @@ body.has-cart .fab__label { display: none; }
 
 .hero__tools { position: relative; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; }
 .hero__tools .hero__date { margin: 0; }
-.hero__tools .install-btn { width: auto; flex: none; margin: 0; padding: 6px 10px; min-height: 38px; border-radius: 12px; font-size: 12px; background: #ffffff15; }
+.hero__tools .install-btn { width: auto; flex: none; margin: 0; padding: 14px 10px; min-height: 52px; border-radius: 12px; font-size: 12px; background: #ffffff15; }
 .hero > .install-hint { position: relative; z-index: 2; background: #143d24; color: #fff; border: 1px solid var(--gold); border-radius: 10px; padding: 10px; text-align: start; }
 
 /* شعارات طرق الدفع داخل الأزرار */
