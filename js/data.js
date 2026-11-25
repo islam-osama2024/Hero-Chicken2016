@@ -160,7 +160,7 @@ const CATEGORIES = [
   {
     ar: "تتبيلة حاتي تركي", en: "Turkish marinade", img: "images/turkish-marinated-shish.jpg", icon: "🥙",
     items: [
-      { ar: "فرخة كاملة متبلة تركي", en: "Turkish marinated whole chicken", price: 190, unit: "kg", img: "images/turkish-marinated-whole-chicken.jpg", opts: ["cut"] },
+      { ar: "فرخة كاملة متبلة تركي", en: "Turkish marinated whole chicken", price: 195, unit: "kg", img: "images/turkish-marinated-whole-chicken.jpg", opts: ["cut"] },
       { ar: "أوراك بالعظم متبلة تركي", en: "Turkish marinated bone-in thighs", price: 230, unit: "kg", img: "images/turkish-marinated-bone-in-thighs.jpg" },
       { ar: "شيش طاوق تركي", en: "Turkish tawook shish", price: 295, unit: "kg", img: "images/turkish-marinated-shish.jpg" },
       { ar: "سيخ شاورما تركي", en: "Turkish shawarma skewer", price: 330, unit: "kg", img: "images/turkish-shawarma-skewer.jpg" },
@@ -172,7 +172,7 @@ const CATEGORIES = [
   {
     ar: "تتبيلة مكسيكي", en: "Mexican marinade", img: "images/mexican-marinated-wings.jpg", icon: "🌶️",
     items: [
-           { ar: "فرخة كاملة متبلة مكسيكي", en: "Mexican marinated whole chicken", price: 190, unit: "kg", img: "images/mexican-marinated-whole-chicken.webp", opts: ["cut"] },
+           { ar: "فرخة كاملة متبلة مكسيكي", en: "Mexican marinated whole chicken", price: 195, unit: "kg", img: "images/mexican-marinated-whole-chicken.webp", opts: ["cut"] },
       { ar: "أجنحة متبلة مكسيكي", en: "Mexican marinated wings", price: 170, unit: "kg", img: "images/mexican-marinated-wings.jpg" },
       { ar: "دبابيس متبلة مكسيكي", en: "Mexican marinated drumsticks", price: 250, unit: "kg", img: "images/mexican-marinated-drumsticks.jpg" },
       { ar: "صدور متبلة مكسيكي", en: "Mexican marinated breasts", price: 330, unit: "kg", img: "images/mexican-marinated-breasts.jpg" }
@@ -181,7 +181,7 @@ const CATEGORIES = [
   {
     ar: "تتبيلة يوناني أعشاب", en: "Greek herb marinade", img: "images/greek-marinated-shish.jpg", icon: "🌿",
     items: [
-            { ar: "فرخة كاملة متبلة يوناني", en: "Greek marinated whole chicken", price: 190, unit: "kg", img: "images/greek-marinated-whole-chicken.webp", opts: ["cut"] },
+            { ar: "فرخة كاملة متبلة يوناني", en: "Greek marinated whole chicken", price: 195, unit: "kg", img: "images/greek-marinated-whole-chicken.webp", opts: ["cut"] },
       { ar: "دبابيس متبلة يوناني", en: "Greek marinated drumsticks", price: 250, unit: "kg", img: "images/greek-marinated-drumsticks.jpg" },
       { ar: "صدور متبلة يوناني", en: "Greek marinated breasts", price: 330, unit: "kg", img: "images/greek-marinated-breasts.jpg" },
       { ar: "شيش متبلة يوناني", en: "Greek marinated shish", price: 330, unit: "kg", img: "images/greek-marinated-shish.jpg" }
@@ -374,4 +374,5 @@ const TEXT = {
     switchTo: "ع"
   }
 };
+
 
