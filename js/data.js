@@ -141,7 +141,8 @@ const CATEGORIES = [
       { ar: "كفتة فراخ سادة", en: "Plain chicken kofta", price: 299, unit: "kg", img: "images/natural-chicken-kofta.jpg" },
       { ar: "مسحب فراخ سادة", en: "Plain pulled chicken", price: 330, unit: "kg", img: "images/natural-pulled-chicken.jpg" },
       { ar: "برجر فراخ بحشو الجبنة", en: "Cheese-stuffed chicken burger", price: 310, unit: "kg", img: "images/cheese-stuffed-chicken-burger.jpg" },
-      { ar: "صدور مدخنة", en: "Smoked chicken breasts", price: 310, unit: "kg", img: "images/smoked-chicken-breasts.webp" }
+      { ar: "صدور مدخنة", en: "Smoked chicken breasts", price: 310, unit: "kg", img: "images/smoked-chicken-breasts.webp" },
+      { ar: "تشيكن بولز", en: "Chicken balls", price: 300, unit: "kg", img: "images/1-chicken-balls.jpg" }
     ]
   },
   {
