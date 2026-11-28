@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>دجاج هيرو | Hero Chicken - فراخ فريش ومتبلة في بنها</title>
+  <meta name="description" content="دجاج هيرو (Hero Chicken): فراخ فريش وفراخ متبلة جاهزة بجميع الخلطات. اطلب أونلاين على واتساب مع توصيل في بنها.">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="theme-color" content="#1a4d2e">
+  <link rel="canonical" href="https://islam-osama2024.github.io/Hero-Chicken2016/">
+
+  <!-- معاينة الرابط عند المشاركة (واتساب / فيسبوك) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:site_name" content="Hero Chicken | دجاج هيرو">
+  <meta property="og:title" content="دجاج هيرو | Hero Chicken - فراخ فريش ومتبلة في بنها">
+  <meta property="og:description" content="فراخ فريش وفراخ متبلة جاهزة بجميع الخلطات. اطلب أونلاين على واتساب مع توصيل في بنها.">
+  <meta property="og:url" content="https://islam-osama2024.github.io/Hero-Chicken2016/">
+  <meta property="og:image" content="https://islam-osama2024.github.io/Hero-Chicken2016/icons/icon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary">
+
+  <!-- خط Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&amp;text=%D8%A3%D8%A8%D9%88%20%D8%A5%D9%84%D9%8A%D8%A7%D8%B3%20%7C%20Abu%20Elias&amp;display=swap" rel="stylesheet">
+
+  <!-- الوضع الليلي: بنقرا الاختيار المحفوظ قبل تحميل التنسيق عشان الصفحة متفتحش بلون غلط -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("hc-theme");
+        var q = new URLSearchParams(location.search).get("theme");
+        if (q === "dark" || q === "light") t = q;
+        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- التنسيق (الخطوة الجاية) -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/concept.css">
+  <link rel="stylesheet" href="css/dark.css">
+</head>
+<body>
+
+  <!-- ========== الهيدر: اللوجو والاسم وزر اللغة ========== -->
+  <header class="hero">
+    <!-- فيديو الخلفية: حط الفيديو في videos/1-hero-raw-shish-28s.mp4 (لو مش موجود بيفضل اللون الأخضر) -->
+    <video class="hero__video" muted loop playsinline preload="none" aria-hidden="true">
+      <source data-src="videos/1-hero-raw-shish-28s.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero__top">
+      <span class="status" id="status"></span>
+      <div class="hero__actions">
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="الوضع الليلي"></button>
+        <button class="lang-btn" id="langBtn">EN</button>
+      </div>
+    </div>
+    <div class="brand">
+      <img class="brand__logo" src="images/opt/logo.png" alt="Hero Chicken">
+      <div class="brand__text">
+        <h1 class="brand__name">HERO CHICKEN</h1>
+        <p class="brand__tag" id="tagline"></p>
+      </div>
+    </div>
+    <p class="hero__delivery" id="deliveryHint"></p>
+    <div class="hero__tools">
+      <time class="hero__date" id="todayDate"></time>
+      <button class="install-btn" id="installBtn" type="button" aria-describedby="installHint"></button>
+    </div>
+    <p class="install-hint" id="installHint" hidden></p>
+  </header>
+
+  <!-- ========== أزرار الأقسام (JS هيملاها) ========== -->
+  <div class="chips-wrap" id="chipsWrap">
+    <button class="chips-arrow chips-arrow--l" id="chipsL" type="button" aria-label="يسار">‹</button>
+    <nav class="chips" id="chips" aria-label="الأقسام"></nav>
+    <button class="chips-arrow chips-arrow--r" id="chipsR" type="button" aria-label="يمين">›</button>
+  </div>
+
+  <!-- ========== بنر العروض (JS بيملاه من CONFIG.banners) ========== -->
+  <section class="banner" id="banner" hidden></section>
+
+  <!-- ========== البحث ========== -->
+  <div class="search"><input id="search" type="search" autocomplete="off" aria-label="search"></div>
+  <p class="no-results" id="noResults" hidden></p>
+
+  <!-- ========== المنيو: الأقسام والأصناف (JS هيملاها) ========== -->
+  <main class="menu" id="menu"></main>
+
+  <!-- ========== الفوتر: السوشيال والتواصل وبيانات المشروع (JS بيملاه) ========== -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <img class="footer__logo" src="images/opt/logo.png" alt="Hero Chicken">
+      <div>
+        <strong class="footer__name">HERO CHICKEN</strong>
+        <p class="footer__tag" id="footTag"></p>
+      </div>
+    </div>
+
+    <div class="footer__cols">
+      <div class="footer__col">
+        <h3 class="footer__title" id="catsTitle"></h3>
+        <nav class="footer__cats" id="footCats" aria-label="Menu categories"></nav>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__title" id="followTitle"></h3>
+        <div class="social" id="social"></div>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__title" id="contactTitle"></h3>
+        <ul class="contact" id="contact"></ul>
+      </div>
+    </div>
+
+    <div class="footer__map">
+      <h3 class="footer__title" id="mapTitle"></h3>
+      <iframe class="footer__mapframe" src="https://www.google.com/maps?q=30.4659929,31.1848307&hl=ar&z=17&output=embed" loading="lazy" title="Hero Chicken location map"></iframe>
+    </div>
+
+    <p class="footer__copy" id="copy"></p>
+    <p class="footer__credit" id="credit"></p>
+  </footer>
+
+  <!-- ========== أزرار جنب الشاشة: واتساب + لأعلى ========== -->
+  <nav class="bottom-dock" id="fabWrap" aria-label="Quick actions">
+    <a class="fab fab--wa" id="waFab" href="#" target="_blank" rel="noopener"></a>
+    <button class="cart-bar" id="cartBar" type="button">
+      <span id="cartCount"></span>
+      <span id="cartTotal"></span>
+    </button>
+    <button class="fab fab--top" id="toTop" type="button" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+  </nav>
+
+  <!-- ========== نافذة اختيار الصنف (JS بيملاها) ========== -->
+  <div class="sheet" id="itemSheet" role="dialog" aria-modal="true" aria-label="Product options"><div class="panel" id="itemPanel"></div></div>
+
+  <!-- ========== نافذة الطلب ========== -->
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="panel">
+      <button class="panel__close" id="closeBtn" type="button" aria-label="إغلاق">×</button>
+
+      <!-- (أ) نموذج الطلب -->
+      <div id="orderForm">
+        <h2 class="panel__title" id="cartTitle"></h2>
+
+        <!-- أصناف الطلب (JS هيملاها) -->
+        <div class="cart-list" id="cartList"></div>
+
+        <div class="fee-rows" id="feeRows"></div>
+        <div class="cart-total">
+          <span id="totalLabel"></span>
+          <span id="totalValue"></span>
+        </div>
+        <p class="cart-note" id="cartNote"></p>
+        <p class="cart-note cart-note--warn" id="hoursNote"></p>
+
+        <!-- توصيل أو استلام + المنطقة + الموقع -->
+        <div class="opt__row">
+          <button type="button" class="pill is-on" id="modeDel" data-action="mode" data-m="delivery"></button>
+          <button type="button" class="pill" id="modePick" data-action="mode" data-m="pickup"></button>
+        </div>
+        <div id="deliveryBox">
+          <select class="field" id="area" aria-label="area"></select>
+          <button type="button" class="loc-btn" id="locBtn"></button>
+          <p class="cart-note" id="locStatus"></p>
+        </div>
+
+        <!-- طريقة الدفع -->
+        <div class="opt" id="paySec"><h4 id="payTitle"></h4><div class="opt__row" id="payRow"></div></div>
+
+        <!-- بيانات العميل -->
+        <input class="field" id="custName" type="text">
+        <input class="field" id="custPhone" type="tel" inputmode="tel" autocomplete="tel">
+        <input class="field" id="custAddress" type="text">
+        <textarea class="field" id="custNotes" rows="2"></textarea>
+
+        <button type="button" class="link-btn" id="forgetBtn"></button>
+        <p class="cart-note cart-note--warn" id="formMsg"></p>
+        <button class="send-btn" id="sendBtn" type="button"></button>
+      </div>
+
+      <!-- (ب) شاشة الشكر بعد الضغط على إرسال -->
+      <div class="done" id="done" hidden>
+        <div class="done__icon">🐔</div>
+        <h2 class="panel__title" id="doneTitle"></h2>
+        <p class="done__order"><span id="orderNoLabel"></span> <b id="orderNo"></b></p>
+        <p class="done__text" id="doneText"></p>
+        <button class="send-btn" id="reopenBtn" type="button"></button>
+        <button class="back-btn" id="backBtn" type="button"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- الأكواد (الخطوات الجاية): data.js فيه الأصناف ورقم الواتساب، main.js فيه المنطق -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
