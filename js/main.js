@@ -33,6 +33,29 @@ const ICONS = {
 };
 const svg = (name) =>
   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name]}</svg>`;
+
+/* ---------- الوضع الليلي ---------- */
+const THEME_KEY = "hc-theme";                          // اختيار المستخدم محفوظ على الجهاز
+const THEME_ICONS = {
+  moon: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>',
+  sun:  '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>'
+};
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+const currentTheme = () => (document.documentElement.dataset.theme === "dark" ? "dark" : "light");
+function renderThemeBtn() {
+  const btn = $("themeBtn"); if (!btn) return;
+  const dark = currentTheme() === "dark";
+  btn.innerHTML = dark ? THEME_ICONS.sun : THEME_ICONS.moon;   // في الليلي نظهر شمس (زر الرجوع للنهاري) والعكس
+  const label = dark ? txt().themeLight : txt().themeDark;
+  btn.setAttribute("aria-label", label);
+  btn.title = label;
+}
+function setTheme(t, save) {
+  document.documentElement.dataset.theme = t;
+  if (save) { try { localStorage.setItem(THEME_KEY, t); } catch (e) {} }
+  if (themeMeta) themeMeta.content = t === "dark" ? "#0f1712" : "#1a4d2e";
+  renderThemeBtn();
+}
 const toIntl = (p) => "+20" + p.replace(/^0/, "");   // 0127... ← +20127...
 
 /* ---------- 1) رسم الصفحة ---------- */
@@ -41,6 +64,7 @@ function renderStatic() {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   $("langBtn").textContent = t.switchTo;
+  renderThemeBtn();
   $("tagline").textContent = t.tagline;
   $("deliveryHint").textContent = t.deliveryHint;
   $("fabWrap").setAttribute("aria-label", t.quickActions);
@@ -603,6 +627,9 @@ document.addEventListener("click", (e) => {
 });
 $("itemSheet").addEventListener("click", (e) => { if (e.target === $("itemSheet")) closeItem(); });
 
+$("themeBtn").addEventListener("click", () => {
+  setTheme(currentTheme() === "dark" ? "light" : "dark", true);
+});
 $("langBtn").addEventListener("click", () => {
   lang = lang === "ar" ? "en" : "ar";
   renderStatic(); renderMenu(); updateCartBar();
@@ -659,6 +686,7 @@ loadAnalytics();
 setupPWA();
 setInterval(() => { renderStatus(); renderDate(); }, 60000);
 document.addEventListener("visibilitychange", () => { if (!document.hidden) { renderStatus(); renderDate(); } });
+setTheme(currentTheme(), false);   // نثبّت الوضع اللي اتحدد في الهيد ونجهّز زر التبديل
 renderStatic();
 renderMenu();
 updateCartBar();
