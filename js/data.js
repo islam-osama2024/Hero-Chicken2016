@@ -314,7 +314,9 @@ const TEXT = {
     sections: "الأقسام",
     rights: "جميع الحقوق محفوظة",
     credit: "تصميم وتطوير",
-    switchTo: "EN"
+    switchTo: "EN",
+    themeDark: "الوضع الليلي",
+    themeLight: "الوضع النهاري"
   },
   en: {
     installShort: "📲 Install menu",
@@ -374,9 +376,10 @@ const TEXT = {
     sections: "Categories",
     rights: "All rights reserved",
     credit: "Designed & developed by",
-    switchTo: "ع"
+    switchTo: "ع",
+    themeDark: "Dark mode",
+    themeLight: "Light mode"
   }
 };
-
 
 
